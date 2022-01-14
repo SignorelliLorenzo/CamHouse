@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9PRq31sdZB4uPOtjUW5b5SUUrwBAbIn3pw3mfi9SdPB5F022pUHffEcWBWT3wBtaSVlXnYMyJuz1X/WNHLHafQ==",
+  "dgSpecHash": "q6FfdzWJS6LyOKPjAtie627cDT4ZIeHp6k70miqBRJU8FWn/hipxHy5Ue9Kyf4iLD6XUAbAytw3brMj3hE7OzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LORY\\source\\repos\\CamHouse\\CamHouse.csproj",
+  "projectFilePath": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LORY\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\LORY\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",

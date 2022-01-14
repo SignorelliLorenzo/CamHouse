@@ -1,0 +1,9 @@
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\bin\Debug\CamScraping.exe.config
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\bin\Debug\CamScraping.exe
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\bin\Debug\CamScraping.pdb
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\bin\Debug\WebDriver.dll
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.csprojAssemblyReference.cache
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.csproj.CoreCompileInputs.cache
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.csproj.CopyComplete
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.exe
+C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.pdb

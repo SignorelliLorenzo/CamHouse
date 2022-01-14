@@ -6148,11 +6148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LORY\\source\\repos\\CamHouse\\CamHouse.csproj",
+      "projectUniqueName": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj",
       "projectName": "CamHouse",
-      "projectPath": "C:\\Users\\LORY\\source\\repos\\CamHouse\\CamHouse.csproj",
+      "projectPath": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj",
       "packagesPath": "C:\\Users\\LORY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LORY\\source\\repos\\CamHouse\\obj\\",
+      "outputPath": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
