@@ -1,0 +1,4 @@
+pycodestyle==2.7.0
+pydub==0.25.1
+SpeechRecognition==3.8.1
+toml==0.10.2
