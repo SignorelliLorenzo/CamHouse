@@ -12,13 +12,20 @@ namespace CamHouse.Functions
             
         
         }
-
+        /// <summary>
+        /// Richiesta Get API per IdTelecamera
+        /// </summary>
+        /// <param name="id">IdTelecamera</param>
+        /// <returns>File JsonTelecamere</returns>
         public static string GetId(int id)
         {
 
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// Prende tutti i dati della Telecamera
+        /// </summary>
+        /// <returns>File JsonTelecamere</returns>
         public static string Get()
         {
 
