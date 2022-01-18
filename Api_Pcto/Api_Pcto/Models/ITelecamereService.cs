@@ -11,12 +11,12 @@ namespace Api_Pcto.Models
     {
         public Task<IEnumerable<Telecamera_Data>> GetAll();
 
-        public Task<Telecamera_Data> GetById(int id);
+        public Task<GetTelecameraPerIdResponse> GetById(int id);
 
         public Task<CreaTelecameraResponse> Post(CreaTelecameraRequest request);
 
         public Task<ModificaTelecameraResponse> Put(ModificaTelecameraRequest request);
 
-        public Task<Telecamera_Data> Delete(int id);
+        public Task<EliminaTelecameraResponse> Delete(int id);
     }
 }

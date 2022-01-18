@@ -37,20 +37,8 @@ namespace Api_Pcto.Controllers
         {
             var result = await _telecamere.GetById(id);
             if (result == null)
-            {
-                return new GetTelecameraPerIdResponse()
-                {
-                    Success = false,
-                    Found_telecamera = null,
-                    Errors = new List<string>() { "Not Found" }
-                };
-            }
-            return new GetTelecameraPerIdResponse()
-            {
-                Success = true,
-                Found_telecamera = result,
-                Errors = null
-            }; 
+                return NotFound();
+            return result;
         }
 
         // POST api/<ValuesController>
@@ -75,10 +63,10 @@ namespace Api_Pcto.Controllers
 
         // DELETE api/<ValuesController>/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Telecamera_Data>> Delete(int id)
+        public async Task<ActionResult<EliminaTelecameraResponse>> Delete(int id)
         {
             var result = await _telecamere.Delete(id);
-            if(result == null)
+            if (result == null)
                 return NotFound();
             return result;
         }

@@ -21,12 +21,24 @@ namespace Api_Pcto.Models
             return await _context.eletelecamere.ToListAsync();
         }
 
-        public async Task<Telecamera_Data> GetById(int id)
+        public async Task<GetTelecameraPerIdResponse> GetById(int id)
         {
             Telecamera_Data telecamera = await _context.eletelecamere.FirstOrDefaultAsync(telecamera => telecamera.id == id);
             if (telecamera == null)
-                return null;
-            return telecamera;
+            {
+                return new GetTelecameraPerIdResponse()
+                {
+                    Success = false,
+                    Found_telecamera = null,
+                    Errors = new List<string>() { "Not Found" }
+                };
+            }
+            return new GetTelecameraPerIdResponse()
+            {
+                Success = true,
+                Found_telecamera = telecamera,
+                Errors = null
+            };
         }
 
         public async Task<CreaTelecameraResponse> Post(CreaTelecameraRequest request)
@@ -94,15 +106,38 @@ namespace Api_Pcto.Models
 
         }
 
-        public async Task<Telecamera_Data> Delete(int id)
+        public async Task<EliminaTelecameraResponse> Delete(int id)
         {
-            Telecamera_Data telecamera;
-            telecamera = await _context.eletelecamere.FirstOrDefaultAsync(telecamera => telecamera.id == id);
+            Telecamera_Data telecamera = await _context.eletelecamere.FirstOrDefaultAsync(telecamera => telecamera.id == id);
             if (telecamera == null)
-                return null;
-            _context.eletelecamere.Remove(telecamera);
-            await _context.SaveChangesAsync();
-            return telecamera;
+            {
+                return new EliminaTelecameraResponse()
+                {
+                    Success = false,
+                    Deleted_telecamera = null,
+                    Errors = new List<string>() { "Not Found" }
+                };
+            }
+            try
+            {
+                _context.eletelecamere.Remove(telecamera);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException ex)
+            {
+                return new EliminaTelecameraResponse()
+                {
+                    Success = false,
+                    Deleted_telecamera = null,
+                    Errors = new List<string> { ex.Message }
+                };
+            }
+            return new EliminaTelecameraResponse()
+            {
+                Success = true,
+                Deleted_telecamera = telecamera,
+                Errors = null
+            };
         }
     }
 }
