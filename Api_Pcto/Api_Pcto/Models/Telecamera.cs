@@ -19,9 +19,8 @@ namespace Api_Pcto
         [Required(ErrorMessage = "Il link è un campo necessario"), Range(0, int.MaxValue, ErrorMessage = "Il numero dei salvati deve essere >= 0")]
         public int num_salvati { get; set; }
 
-        public Telecamera(int id,string nome, string link, int num_like, int num_salvati)
+        public Telecamera(string nome, string link, int num_like, int num_salvati)
         {
-            this.id = id;
             this.nome = nome;
             this.link = link;
             this.num_like = num_like;
@@ -33,8 +32,7 @@ namespace Api_Pcto
     {
         [Required]
         public DateTime data_creazione { get; set; }
-
-        public Telecamera_Data(int id, string nome, string link, int num_like, int num_salvati) : base(id, nome, link, num_like, num_salvati)
+        public Telecamera_Data(string nome, string link, int num_like, int num_salvati) : base(nome, link, num_like, num_salvati)
         {
             data_creazione = DateTime.Now;
         }

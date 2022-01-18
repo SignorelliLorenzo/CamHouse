@@ -8,7 +8,13 @@ namespace Api_Pcto.Models.DTOS.Requests
 {
     public class CreaTelecameraRequest
     {
-        [Required]
-        public Telecamera telecamera { get; set; }
+        [Required(ErrorMessage = "Il nome è un campo necessario")]
+        public string nome { get; set; }
+        [Required(ErrorMessage = "Il link è un campo necessario")]
+        public string link { get; set; }
+        [Required(ErrorMessage = "Il numero dei like è un campo necessario"), Range(0, int.MaxValue, ErrorMessage = "Il numero dei like deve essere >= 0")]
+        public int num_like { get; set; }
+        [Required(ErrorMessage = "Il numero dei salvati è un campo necessario"), Range(0, int.MaxValue, ErrorMessage = "Il numero dei salvati deve essere >= 0")]
+        public int num_salvati { get; set; }
     }
 }

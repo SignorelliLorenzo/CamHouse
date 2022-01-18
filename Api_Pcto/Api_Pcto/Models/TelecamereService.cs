@@ -43,7 +43,7 @@ namespace Api_Pcto.Models
 
         public async Task<CreaTelecameraResponse> Post(CreaTelecameraRequest request)
         {
-            Telecamera_Data telecamera = new Telecamera_Data(request.telecamera.id, request.telecamera.nome, request.telecamera.link, request.telecamera.num_like, request.telecamera.num_salvati);
+            Telecamera_Data telecamera = new Telecamera_Data(request.nome, request.link, request.num_like, request.num_salvati);
             try
             {
                 await _context.AddAsync(telecamera);
