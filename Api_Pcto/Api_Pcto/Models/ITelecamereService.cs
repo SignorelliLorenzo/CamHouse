@@ -9,14 +9,14 @@ namespace Api_Pcto.Models
 {
     public interface ITelecamereService
     {
-        public Task<IEnumerable<Telecamera>> GetAll();
+        public Task<IEnumerable<Telecamera_Data>> GetAll();
 
-        public Task<Telecamera> GetById(int id);
+        public Task<Telecamera_Data> GetById(int id);
 
         public Task<CreaTelecameraResponse> Post(CreaTelecameraRequest request);
 
         public Task<ModificaTelecameraResponse> Put(ModificaTelecameraRequest request);
 
-        public Task<Telecamera> Delete(int id);
+        public Task<Telecamera_Data> Delete(int id);
     }
 }

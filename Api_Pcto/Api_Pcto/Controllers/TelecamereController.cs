@@ -24,7 +24,7 @@ namespace Api_Pcto.Controllers
         }
         // GET: api/<ValuesController>
         [HttpGet]
-        public async Task<IEnumerable<Telecamera>> GetAll()
+        public async Task<IEnumerable<Telecamera_Data>> GetAll()
         {
             var result = await _telecamere.GetAll();
 
@@ -33,12 +33,24 @@ namespace Api_Pcto.Controllers
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Telecamera>> GetById(int id)
+        public async Task<ActionResult<GetTelecameraPerIdResponse>> GetById(int id)
         {
             var result = await _telecamere.GetById(id);
             if (result == null)
-                return NotFound();
-            return result;
+            {
+                return new GetTelecameraPerIdResponse()
+                {
+                    Success = false,
+                    Found_telecamera = null,
+                    Errors = new List<string>() { "Not Found" }
+                };
+            }
+            return new GetTelecameraPerIdResponse()
+            {
+                Success = true,
+                Found_telecamera = result,
+                Errors = null
+            }; 
         }
 
         // POST api/<ValuesController>
@@ -46,6 +58,8 @@ namespace Api_Pcto.Controllers
         public async Task<ActionResult<CreaTelecameraResponse>> Post(CreaTelecameraRequest request)
         {
             var result = await _telecamere.Post(request);
+            if (result == null)
+                return NotFound();
             return result;
         }
 
@@ -54,12 +68,14 @@ namespace Api_Pcto.Controllers
         public async Task<ActionResult<ModificaTelecameraResponse>> Put(ModificaTelecameraRequest request)
         {
             var result = await _telecamere.Put(request);
+            if (result == null)
+                return NotFound();
             return result;
         }
 
         // DELETE api/<ValuesController>/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Telecamera>> Delete(int id)
+        public async Task<ActionResult<Telecamera_Data>> Delete(int id)
         {
             var result = await _telecamere.Delete(id);
             if(result == null)

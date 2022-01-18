@@ -9,7 +9,7 @@ namespace Api_Pcto.Models.DTOS.Responses
     {
         public bool Success { get; set; }
 
-        public Telecamera Created_telecamera { get; set; }
+        public Telecamera_Data Created_telecamera { get; set; }
 
         public List<string> Errors { get; set; }
 
