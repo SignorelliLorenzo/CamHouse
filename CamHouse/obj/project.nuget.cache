@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q6FfdzWJS6LyOKPjAtie627cDT4ZIeHp6k70miqBRJU8FWn/hipxHy5Ue9Kyf4iLD6XUAbAytw3brMj3hE7OzA==",
+  "dgSpecHash": "on1Rgbs6GSvZ0POPJH3xcaU2WdqfC+APpIsRUPJhdufl8tnQCDU+LVmBZLvFDRUCXsHJcr+IDzgrG+61AEl05A==",
   "success": true,
   "projectFilePath": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj",
   "expectedPackageFiles": [
@@ -109,7 +109,8 @@
     "C:\\Users\\LORY\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\LORY\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\LORY\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\LORY\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\LORY\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\LORY\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
   ],
   "logs": []
 }
