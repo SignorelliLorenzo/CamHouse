@@ -75,3 +75,4 @@ C:\Users\LORY\Source\Repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\
 C:\Users\LORY\Source\Repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\ref\CamHouse.dll
 C:\Users\LORY\Source\Repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\CamHouse.pdb
 C:\Users\LORY\Source\Repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\CamHouse.genruntimeconfig.cache
+C:\Users\LORY\Source\Repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Shared\_CookieConsentPartial.cshtml.g.cs
