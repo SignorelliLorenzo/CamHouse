@@ -4,7 +4,52 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<table class="table table-striped table-dark">
+
+    <tr>
+
+        <th>Nome</th>
+        <th>Link</th>
+        <th>Numero Like</th>
+        <th>Numero Salvati</th>
+        
+        <th><b><a style="color:darkorange" asp-page="./Create">Create New</a></b></th>
+    </tr>
+
+
+
+    <tbody>
+        @foreach (var item in Model.elecamere)
+        {
+            <tr>
+                <td>@item.nome</td>
+                <td>@item.link</td>
+                <td>@item.num_like</td>
+                <td>@item.num_salvati</td>
+                
+
+                <td>
+                    <b><a style="color:darkorange" asp-page="./Edit" asp-route-id="@item.id">Edit</a></b>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form method="post" style="display:inline-block">
+                            <input type="hidden" asp-for="camera.id" value="@item.id" /> |
+                            <input type="submit" value="X" class="btn btn-outline-danger" />
+                        </form>
+                    }
+                    else
+                    {
+                        <form style="display:inline-block">
+
+                            | <input type="submit" asp-area="Identity" asp-page="/Account/Login" value="X" class="btn btn-outline-danger" />
+
+                        </form>
+                    }
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>

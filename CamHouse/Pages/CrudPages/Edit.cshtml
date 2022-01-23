@@ -1,0 +1,36 @@
+﻿@page
+@model CamHouse.Pages.CrudPages.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="col-md-4">
+    <form method="post">
+        <input type="hidden" asp-for="camera.id" />
+        <div class="form-group">
+            <b><label class="control-label">Codice Fiscale</label></b>
+            <input asp-for="camera.nome" class="form-control" />
+            <span asp-validation-for="camera.nome" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <b><label class="control-label">Cognome</label></b>
+            <input asp-for="camera.link" class="form-control" />
+            <span asp-validation-for="camera.link" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <b><label class="control-label">Nome</label></b>
+            <input asp-for="camera.num_like" class="form-control" />
+            <span asp-validation-for="camera.num_like" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <b><label class="control-label">Nazionalità</label></b>
+            <input asp-for="camera.num_salvati" class="form-control" />
+            <span asp-validation-for="camera.num_salvati" class="text-danger"></span>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Edit" class="btn btn-info" />
+        </div>
+    </form>
+</div>
