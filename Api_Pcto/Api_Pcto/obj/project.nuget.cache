@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C7J6hPdR287t93Y+pFQn0sa9G7skNkuPQxDX4dLKezyEDzzQuV91lrSiOyZIJyqHIRPGte4AJMutByV8EJ4qFQ==",
+  "dgSpecHash": "QTMffxCeTr1eVsEhUmfyBAtkeT637Ja4cBR+9FFVl2NboqgZBG03pvlerZO1KI4k735bYpZP0gCYHsLYrCnYFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+  "projectFilePath": "C:\\Users\\ghilardi.17186\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ghilardi.17186\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
