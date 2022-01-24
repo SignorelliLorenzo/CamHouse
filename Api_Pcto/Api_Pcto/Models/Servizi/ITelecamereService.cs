@@ -13,6 +13,10 @@ namespace Api_Pcto.Models
 
         public Task<GetTelecameraPerIdResponse> GetById(int id);
 
+        public Task<GetTelecameraPerNomeResponse> GetByName(string name);
+
+        public Task<GetTelecameraRandomResponse> GetRandom();
+
         public Task<CreaTelecameraResponse> Post(CreaTelecameraRequest request);
 
         public Task<ModificaTelecameraResponse> Put(ModificaTelecameraRequest request);

@@ -51,6 +51,59 @@ namespace Api_Pcto.Models
         }
 
         /// <summary>
+        /// Metodo che restituisce un oggetto DTO GetTelecameraPerNome Response dato un nome.
+        /// </summary>
+        /// <param name="name">nome delle telecamere interessate.</param>
+        /// <returns></returns>
+        public async Task<GetTelecameraPerNomeResponse> GetByName(string name)
+        {
+            var telecamere = await _context.eletelecamere.Where(t => t.nome == name).ToListAsync();
+            if(telecamere.Count == 0)
+            {
+                return new GetTelecameraPerNomeResponse()
+                {
+                    Success = false,
+                    Found_telecameras = null,
+                    Errors = new List<string>() { "Not Found" }
+                };
+            }
+            return new GetTelecameraPerNomeResponse()
+            {
+                Success = true,
+                Found_telecameras = telecamere,
+                Errors = null
+            };
+        }
+
+        /// <summary>
+        /// Metodo che restituisce un oggetto DTO GetTelecameraPerNome Response dato un nome.
+        /// </summary>
+        /// <param name="name">nome delle telecamere interessate.</param>
+        /// <returns></returns>
+        public async Task<GetTelecameraRandomResponse> GetRandom()
+        {
+            Random random = new Random();
+            var num = await _context.eletelecamere.CountAsync();
+            var num_generato = random.Next(1, num);
+            var telecamera = (await _context.eletelecamere.ToListAsync())[num_generato];
+            if (telecamera == null)
+            {
+                return new GetTelecameraRandomResponse()
+                {
+                    Success = false,
+                    Found_telecamera = null,
+                    Errors = new List<string>() { "Errore inaspettato" }
+                };
+            }
+            return new GetTelecameraRandomResponse()
+            {
+                Success = true,
+                Found_telecamera = telecamera,
+                Errors = null
+            };
+        }
+
+        /// <summary>
         /// Metodo che crea un oggetto DTO CreaTelecameraResponse e crea una telecamera sul database dato un DTO CreaTelecameraRequest.
         /// </summary>
         /// <param name="request">Oggetto CreaTelecameraRequest, maggiori informazioni reperibili tramite schema su swagger</param>

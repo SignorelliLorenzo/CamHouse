@@ -22,7 +22,7 @@ namespace Api_Pcto.Controllers
         {
             _telecamere = telecamere;
         }
-        // GET: api/<ValuesController>
+
         /// <summary>
         /// Metodo API che restituisce l'intero contenuto del Database.
         /// </summary>
@@ -35,16 +35,44 @@ namespace Api_Pcto.Controllers
             return result;
         }
 
-        // GET api/<ValuesController>/5
+
         /// <summary>
         /// Metodo API che restituisce un oggetto DTO GetTelecameraPerIdResponse dato un id.
         /// </summary>
         /// <param name="id">Id della telecamera interessata.</param>
         /// <returns></returns>
-        [HttpGet("{id}")]
+        [HttpGet("id {id}")]
         public async Task<ActionResult<GetTelecameraPerIdResponse>> GetById(int id)
         {
             var result = await _telecamere.GetById(id);
+            if (result == null)
+                return NotFound();
+            return result;
+        }
+
+
+        /// <summary>
+        /// Metodo API che restituisce un oggetto DTO GetTelecameraPerNomeResponse dato un nome.
+        /// </summary>
+        /// <param name="nome">Nome della telecamera interessata.</param>
+        /// <returns></returns>
+        [HttpGet("nome {nome}")]
+        public async Task<ActionResult<GetTelecameraPerNomeResponse>> GetByName(string nome)
+        {
+            var result = await _telecamere.GetByName(nome);
+            if (result == null)
+                return NotFound();
+            return result;
+        }
+
+        /// <summary>
+        /// Metodo API che restituisce un oggetto DTO GetTelecameraRandomResponse.
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("random")]
+        public async Task<ActionResult<GetTelecameraRandomResponse>> GetRandom()
+        {
+            var result = await _telecamere.GetRandom();
             if (result == null)
                 return NotFound();
             return result;
