@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Api_Pcto.Models.DTOS.Requests
 {
+    /// <summary>
+    /// Oggetto DTO, Deve essere fornito dall' utente che intende effettuare la creazione di una telecamera.
+    /// </summary>
     public class CreaTelecameraRequest
     {
         [Required(ErrorMessage = "Il nome è un campo necessario")]

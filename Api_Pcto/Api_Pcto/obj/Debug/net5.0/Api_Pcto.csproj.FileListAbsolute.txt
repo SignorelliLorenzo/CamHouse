@@ -169,3 +169,4 @@ C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Pcto\Api_Pcto\obj\Debug\net5.0
 C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Pcto\Api_Pcto\obj\Debug\net5.0\ref\Api_Pcto.dll
 C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Pcto\Api_Pcto\obj\Debug\net5.0\Api_Pcto.pdb
 C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Pcto\Api_Pcto\obj\Debug\net5.0\Api_Pcto.genruntimeconfig.cache
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Pcto\Api_Pcto\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
