@@ -16,11 +16,20 @@ namespace Api_Pcto.Models
         {
             _context = context;
         }
+        /// <summary>
+        /// Metodo che restituisce l' intera lista di telecamere dal DB.
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<Telecamera_Data>> GetAll()
         {
             return await _context.eletelecamere.ToListAsync();
         }
 
+        /// <summary>
+        /// Metodo che restituisce un oggetto DTO GetTelecameraPerIdResponse dato un id.
+        /// </summary>
+        /// <param name="id">Id della telecamera interessata.</param>
+        /// <returns></returns>
         public async Task<GetTelecameraPerIdResponse> GetById(int id)
         {
             Telecamera_Data telecamera = await _context.eletelecamere.FirstOrDefaultAsync(telecamera => telecamera.id == id);
@@ -41,6 +50,11 @@ namespace Api_Pcto.Models
             };
         }
 
+        /// <summary>
+        /// Metodo che crea un oggetto DTO CreaTelecameraResponse e crea una telecamera sul database dato un DTO CreaTelecameraRequest.
+        /// </summary>
+        /// <param name="request">Oggetto CreaTelecameraRequest, maggiori informazioni reperibili tramite schema su swagger</param>
+        /// <returns></returns>
         public async Task<CreaTelecameraResponse> Post(CreaTelecameraRequest request)
         {
             Telecamera_Data telecamera = new Telecamera_Data(request.nome, request.link, request.num_like, request.num_salvati);
@@ -66,6 +80,11 @@ namespace Api_Pcto.Models
             };
         }
 
+        /// <summary>
+        /// Metodo che crea un oggetto DTO ModificaTelecameraResponse e modifica una telecamera sul database dato un DTO ModificaTelecameraRequest.
+        /// </summary>
+        /// <param name="request">Oggetto ModificaTelecameraRequest, maggiori informazioni reperibili tramite schema su swagger</param>
+        /// <returns></returns>
         public async Task<ModificaTelecameraResponse> Put(ModificaTelecameraRequest request)
         {
 
@@ -106,6 +125,11 @@ namespace Api_Pcto.Models
 
         }
 
+        /// <summary>
+        /// Metodo che restituisce un oggetto DTO EliminaTelecameraResponse ed elimina dal database una telecamera dato il suo id.
+        /// </summary>
+        /// <param name="id">Id della telecamera interessata.</param>
+        /// <returns></returns>
         public async Task<EliminaTelecameraResponse> Delete(int id)
         {
             Telecamera_Data telecamera = await _context.eletelecamere.FirstOrDefaultAsync(telecamera => telecamera.id == id);
