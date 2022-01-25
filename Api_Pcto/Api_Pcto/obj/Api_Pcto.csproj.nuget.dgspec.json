@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ghilardi.17186\\source\\repos\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {}
+    "C:\\Users\\ghilardi.17186\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ghilardi.17186\\source\\repos\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
+    "C:\\Users\\ghilardi.17186\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ghilardi.17186\\source\\repos\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+        "projectUniqueName": "C:\\Users\\ghilardi.17186\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
         "projectName": "Api_Pcto",
-        "projectPath": "C:\\Users\\ghilardi.17186\\source\\repos\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+        "projectPath": "C:\\Users\\ghilardi.17186\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
         "packagesPath": "C:\\Users\\ghilardi.17186\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ghilardi.17186\\source\\repos\\Api_Pcto\\Api_Pcto\\obj\\",
+        "outputPath": "C:\\Users\\ghilardi.17186\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\ghilardi.17186\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -43,6 +45,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.12, )"
