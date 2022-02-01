@@ -1,4 +1,5 @@
 ﻿using Api_Pcto.Data;
+using Api_Pcto.Models.DTOS.Requests;
 using Api_Pcto.Models.DTOS.Responses;
 using Api_Pcto.Models.Modelli;
 using Microsoft.EntityFrameworkCore;
@@ -19,17 +20,23 @@ namespace Api_Pcto.Models.Servizi
             this._context = context;
         }
 
-        public async Task<UserTokenResponse> AddUserToken(UserToken req)
+        public async Task<UserTokenResponse> AddUserToken(UserTokenRequest req)
         {
             try
             {
-                var result = await _context.eletokens.AddAsync(req);
+                UserToken usertoken = new UserToken()
+                {
+                    Name = req.Name,
+                    Token = req.Token,
+                    CreationTime = DateTime.Now
+                };
+                var result = await _context.eletokens.AddAsync(usertoken);
                 await _context.SaveChangesAsync();
                 return new UserTokenResponse()
                 {
-                    Token = req.Token,
-                    CreationTime = req.CreationTime,
-                    Username = req.Name,
+                    Token = usertoken.Token,
+                    CreationTime = usertoken.CreationTime,
+                    Username = usertoken.Name,
                     Errors = null
                 };
             }
@@ -56,6 +63,30 @@ namespace Api_Pcto.Models.Servizi
                     Errors = null
                 };
 
+            return new UserTokenResponse()
+            {
+                Token = null,
+                CreationTime = default(DateTime),
+                Username = null,
+                Errors = new List<string>() { "Not Found" }
+            };
+        }
+
+        public async Task<UserTokenResponse> DeleteUserToken(string Username)
+        {
+            var result = await _context.eletokens.FirstOrDefaultAsync(x => x.Name == Username);           
+            if (result != null)
+            {
+                _context.eletokens.Remove(result);
+                await _context.SaveChangesAsync();
+                return new UserTokenResponse()
+                {
+                    Token = result.Token,
+                    CreationTime = result.CreationTime,
+                    Username = result.Name,
+                    Errors = null
+                };
+            }
             return new UserTokenResponse()
             {
                 Token = null,

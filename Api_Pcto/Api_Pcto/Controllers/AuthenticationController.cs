@@ -48,9 +48,9 @@ namespace Api_Pcto.Controllers
                     return BadRequest(new UserRegistrationResponse()
                     {
                         Errors = new List<string>()
-                {
-                    "Email Gia In Utilizzo"
-                },
+                        {
+                            "Email Gia In Utilizzo"
+                        },
                         Success = false
                     });
                 }
@@ -60,19 +60,18 @@ namespace Api_Pcto.Controllers
                     return BadRequest(new UserRegistrationResponse()
                     {
                         Errors = new List<string>()
-                {
-                    "Username Gia in Utilizzo"
-                },
+                        {
+                            "Username Gia in Utilizzo"
+                        },
                         Success = false
                     });
                 }
                 var NewUser = new UserModel() { Email = user.Email, UserName = user.Username };
                 var IsCreated = await _userManager.CreateAsync(NewUser, user.Password);
-                var NewUserToken = new UserToken()
+                var NewUserToken = new UserTokenRequest()
                 {
                     Name = user.Username,
-                    Token = GenerateJwtToken(NewUser),
-                    CreationTime = DateTime.Now
+                    Token = GenerateJwtToken(NewUser)                    
                 };
 
                 if (IsCreated.Succeeded)
@@ -93,7 +92,7 @@ namespace Api_Pcto.Controllers
                     {
                         Errors = IsCreated.Errors.Select(x => x.Description).ToList(),
                         Success = false
-                    }); ;
+                    }); 
                 }
             }
             return BadRequest(new UserRegistrationResponse()
@@ -119,6 +118,7 @@ namespace Api_Pcto.Controllers
                     new Claim(JwtRegisteredClaimNames.Sub,user.Email),
                     new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
                 }),
+                //Nel caso si voglia aggiungere la scadenza al token
                 // Expires = DateTime.UtcNow.AddHours(6),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
@@ -132,17 +132,17 @@ namespace Api_Pcto.Controllers
         [HttpPost("Login")]
         public async Task<AuthResult> Login(LoginRequest req)
         {
-            var isUser = await _userManager.FindByEmailAsync(req.Email);
-            if (isUser != null)
+            var User = await _userManager.FindByEmailAsync(req.Email);
+            if (User != null)
             {
-                var checkpasswd = await _userManager.CheckPasswordAsync(isUser, req.Password);
+                var checkpasswd = await _userManager.CheckPasswordAsync(User, req.Password);
                 if (checkpasswd)
                 {
-                    var UserToken = await userTokenManager.GetUserToken(isUser.UserName);
+                    var UserToken = await userTokenManager.GetUserToken(User.UserName);
                     return new AuthResult()
                     {
                         Success = true,
-                        Username = isUser.Email,
+                        Username = User.Email,
                         Token = UserToken.Token,
                         Errors = null
                     };
@@ -152,9 +152,51 @@ namespace Api_Pcto.Controllers
                     Success = false,
                     Token = null,
                     Errors = new List<string>()
+                    {
+                        "Password non corretta"
+                    },
+                    Username = null
+                };
+            }
+            return new AuthResult()
+            {
+                Success = false,
+                Token = null,
+                Errors = new List<string>()
                 {
-                    "Password non corretta"
+                    "Utente non esistente"
                 },
+                Username = null
+            };
+        }
+
+        [HttpDelete("Delete")]
+        public async Task<AuthResult> Delete(DeleteRequest req)
+        {
+            var User = await _userManager.FindByEmailAsync(req.Email);
+            if (User != null)
+            {
+                var checkpasswd = await _userManager.CheckPasswordAsync(User, req.Password);
+                if (checkpasswd)
+                {
+                    await _userManager.DeleteAsync(User);
+                    var a = await userTokenManager.DeleteUserToken(req.Email);
+                    return new AuthResult()
+                    {
+                        Success = true,
+                        Username = User.Email,
+                        Token = a.Token,
+                        Errors = null
+                    };
+                }
+                return new AuthResult()
+                {
+                    Success = false,
+                    Token = null,
+                    Errors = new List<string>()
+                    {
+                        "Password non corretta"
+                    },
                     Username = null
                 };
             }

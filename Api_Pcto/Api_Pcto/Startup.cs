@@ -56,17 +56,19 @@ namespace Api_Pcto
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-                .AddJwtBearer(jwt =>
+                .AddJwtBearer(jwtoptions =>
                 {
                     var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:SecretKey"]);
-                    jwt.SaveToken = true;
-                    jwt.TokenValidationParameters = new TokenValidationParameters
+                    jwtoptions.SaveToken = true;
+                    jwtoptions.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(key),
                         ValidateIssuer = false,
                         ValidateAudience = false,
+                        //Controlla la scadenza
                         ValidateLifetime = true,
+                        //
                         RequireExpirationTime = false
                     };
                 });
