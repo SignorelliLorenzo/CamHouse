@@ -23,6 +23,7 @@ class User(db.Model):
     Name = db.Column(db.String(100))
     Email = db.Column(db.String(70), unique = True)
     Password = db.Column(db.String(80))
+    Admin=db.Column(db.Boolean,default = False, nullable=False)
 def speech_to_text(audio):
     
     # inizializzi il recognizer
@@ -65,7 +66,7 @@ def token_required(f):
         return  f(current_user, *args, **kwargs)
   
     return decorated
-@app.route('/login', methods =['POST'])
+@app.route('/Login', methods =['POST'])
 def login():
     # creates dictionary of form data
     auth = request.args
@@ -94,7 +95,7 @@ def login():
         # generates the JWT Token
         token = jwt.encode({
             'public_id': user.Public_id,
-            'exp' : datetime.utcnow() + timedelta(minutes = 30)
+            'exp' : datetime.utcnow() + timedelta(days = 365)
         }, app.config['SECRET_KEY'])
         return make_response(jsonify({'token' : token}), 201)
     # returns 403 if password is wrong
@@ -106,14 +107,24 @@ def login():
   
 # REGISTER
 @app.route('/Register', methods =['POST'])
-def register():
+@token_required
+def register(AuthUser):
     # creates a dictionary of the form data
+    if not AuthUser.Admin:
+        return make_response('Unauthorized', 401)
     data = request.args
   
     # gets name, email and password
+    
     name, email = data.get('name'), data.get('email')
     password = data.get('password')
-    print(password)
+    admin= (data.get('admin')=='yes')
+    if not name or not email or not password or not data.get('admin'):
+        return make_response('Missing values', 401)
+    if  data.get('admin')!='yes' and  data.get('admin')!='no' :
+        return make_response('Value admin can be yes or no', 401)
+    
+   
     # checking for existing user
     user = User.query\
         .filter_by(Email = email)\
@@ -124,7 +135,8 @@ def register():
             Public_id = str(uuid.uuid4()),
             Name = name,
             Email = email,
-            Password = generate_password_hash(password)
+            Password = generate_password_hash(password),
+            Admin=admin
         )
         # insert user
         db.session.add(user)
@@ -137,7 +149,7 @@ def register():
 # POST
 @app.route('/', methods=['POST'])
 @token_required
-def Post():
+def Post(data):
     return speech_to_text(io.BytesIO(request.data))
 
      
