@@ -6,5 +6,3 @@ build_property.ProjectTypeGuids =
 build_property.PublishSingleFile = 
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
-build_property.RootNamespace = Api_Pcto
-build_property.ProjectDir = C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Pcto\Api_Pcto\
