@@ -4,6 +4,8 @@ using Api_Pcto.Models.DTOS.Requests;
 using Api_Pcto.Models.DTOS.Responses;
 using Api_Pcto.Models.Modelli;
 using Api_Pcto.Models.Servizi;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +23,7 @@ namespace Api_Pcto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class AuthenticationController : ControllerBase
     {
         private readonly UserManager<UserModel> _userManager;
@@ -54,7 +57,7 @@ namespace Api_Pcto.Controllers
                         Success = false
                     });
                 }
-                var ExistingUserByUsername = await _userManager.FindByNameAsync(user.Username);
+                var ExistingUserByUsername = await _userManager.FindByNameAsync(user.Email);
                 if (ExistingUserByUsername != null)
                 {
                     return BadRequest(new UserRegistrationResponse()
@@ -66,11 +69,11 @@ namespace Api_Pcto.Controllers
                         Success = false
                     });
                 }
-                var NewUser = new UserModel() { Email = user.Email, UserName = user.Username };
+                var NewUser = new UserModel() { Email = user.Email, UserName = user.Email };
                 var IsCreated = await _userManager.CreateAsync(NewUser, user.Password);
                 var NewUserToken = new UserTokenRequest()
                 {
-                    Name = user.Username,
+                    Name = user.Email,
                     Token = GenerateJwtToken(NewUser)                    
                 };
 
@@ -180,7 +183,7 @@ namespace Api_Pcto.Controllers
                 if (checkpasswd)
                 {
                     await _userManager.DeleteAsync(User);
-                    var a = await userTokenManager.DeleteUserToken(req.Email);
+                    var a = await userTokenManager.DeleteUserToken(User.Email);
                     return new AuthResult()
                     {
                         Success = true,

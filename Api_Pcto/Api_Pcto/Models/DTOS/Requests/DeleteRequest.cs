@@ -9,6 +9,7 @@ namespace Api_Pcto.Models.DTOS.Requests
     public class DeleteRequest
     {
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]
