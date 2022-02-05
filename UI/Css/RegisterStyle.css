@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Space+Grotesk:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b5f7e6;
+    box-sizing: border-box;
+}
+
+/* Centrare tutto in mezzo alla pagina*/
+.Row-mid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Form Email Setting */
+#EForm{
+    margin-top: 30px;
+}
+
+/* Form Password and Confirm password Setting */
+#PForm, #CPForm{
+    margin: 10px;
+}
+
+/* Form Submit Setting */
+#SForm{
+    padding: 20px;
+}
+
+/* Input Password */
+#psw-check{
+    width: 500px;
+    font-size: 24px;
+    color: #266352;
+    text-align: center;
+    outline: #53c0a2 2px;
+    padding: 10px;
+    border: 2px solid #53c0a2;
+    border-radius: 5px;
+}
+
+/* Setup placeholder input Password, Email, Confirm Password*/
+#psw-check::placeholder, #e-check::placeholder, #conf-psw-check::placeholder{
+    color: #266352;
+    font-weight: lighter;
+}
+
+/* Input Confirm Password */
+#conf-psw-check{
+    width: 500px;
+    font-size: 24px;
+    margin: 10px 0 0 0px;
+    color: #266352;
+    text-align: center;
+    outline: #53c0a2 2px;
+    padding: 10px;
+    border: 2px solid #53c0a2;
+    border-radius: 5px;
+}
+
+/* Input Email */
+#e-check{
+    font-size: 24px;
+    margin: 10px 0 0 0px;
+    width: 500px;
+    padding: 10px;
+    color: #266352;
+    text-align: center;
+    outline: #53c0a2 1px;
+    border: 2px solid #53c0a2;
+    border-radius: 5px;
+}
+
+/* Input Submit Registrati */
+#SubmitLogin {
+    font-size: 24px;
+    margin: 10px 0 0 0px;
+    width: 500px;
+    color: #266352;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    padding: 5px;
+    outline: #53c0a2 2px;
+    border: 2px solid #128061;
+    border-radius: 5px;
+}
+
+/* Input Passa al Login */
+.LoginRegister{
+    font-size: 24px;
+    margin: 10px 0 0 0px;
+    width: 500px;
+    color: #266352;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    font-family: 'Bungee', cursive;
+}
+
+.LoginRegister{
+    display: inline-block;
+    margin: 26px;
+    padding: 10px;
+    border: 2px solid #128061;
+    border-radius: 20px 5px 20px 5px;
+    width: 500px;
+    text-align: center;
+}
+
+.LoginRegister a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #266352;
+}
+
+.LoginRegister:hover{
+    display: inline-block;
+    border: 2px solid #128061;
+    transition: all 1s;
+    color: #53c0a2;
+    border-radius: 5px 30px 5px 30px;
+}
+
+/* Email Message */
+#e-msg{
+    display: block;
+    color: #000;
+    font-size: 22px;
+    padding: 5px;
+}
+
+/* Titolo Register */
+#Title-register{ 
+    text-align: center;
+    font-size: 54px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif; 
+}
+
+/* Sottotitolo Register */
+#Subtitle-register{
+    text-align: center;
+    padding: 2px;
+    margin: 0 9% 0 9%;
+    width: 500px;
+}
+
+/* Setup Imagine Register*/
+#imgregister{
+    width: 500px;
+    text-align: center;
+}
+
+/* Parte Social */
+.Social-login{
+    margin: 20px 0 0 0;
+}
+
+.Social-login a{
+    font-size: 54px;
+    text-decoration: none;
+    color: #4f4e79;
+    padding: 10px;
+}
+
+.bxl-twitter:hover{ 
+    color: #007fff;
+}
+
+.bxl-facebook:hover{
+    color: #0000ff;
+}
+
+.bxl-discord:hover{
+    color: #728cd4;
+}
+
+.bxl-instagram:hover{
+    animation: instragram-colors-hover 2s alternate infinite;
+}
+
+@keyframes instragram-colors-hover{
+    0%{
+        color: rgba(81,91,212,1);
+    }
+    25%{
+        color: rgba(129,52,175,1);
+    }
+    50%{
+        color: rgba(221,42,123,1);
+    }
+    75%{
+        color: rgba(254,218,119,1);
+    }
+    100%{
+        color: rgba(245,133,41,1);
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 480px) {
+
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+
+}
