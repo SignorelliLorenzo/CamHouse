@@ -2,10 +2,13 @@
 using Api_Pcto.Models;
 using Api_Pcto.Models.DTOS.Requests;
 using Api_Pcto.Models.DTOS.Responses;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -14,6 +17,7 @@ namespace Api_Pcto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class TelecamereController : ControllerBase
     {
         private readonly ITelecamereService _telecamere;
@@ -123,5 +127,6 @@ namespace Api_Pcto.Controllers
                 return NotFound();
             return result;
         }
+        //
     }
 }
