@@ -7,3 +7,12 @@ C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScrapi
 C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.csproj.CopyComplete
 C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.exe
 C:\Users\firriolo.17184\source\repos\CamScraping\CamScraping\obj\Debug\CamScraping.pdb
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\bin\Debug\CamScraping.exe.config
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\bin\Debug\CamScraping.exe
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\bin\Debug\CamScraping.pdb
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\bin\Debug\WebDriver.dll
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\obj\Debug\CamScraping.csprojAssemblyReference.cache
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\obj\Debug\CamScraping.csproj.CoreCompileInputs.cache
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\obj\Debug\CamScraping.csproj.CopyComplete
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\obj\Debug\CamScraping.exe
+C:\Users\ghilardi.17186\Source\Repos\CamHouse\CamScraping\CamScraping\obj\Debug\CamScraping.pdb
