@@ -15,8 +15,8 @@ namespace CamScraping
         static void Main(string[] args)
         {
             ChromeOptions options = new ChromeOptions();
-            options.AddExtension("extension_4_41_0_0.crx");
-            options.AddArgument("load-extension" + Directory.GetCurrentDirectory() + @"\ohahllgiabjaoigichmmfljhkcfikeof");
+            //options.AddExtension("extension_4_41_0_0.crx");
+            //options.AddArgument("load-extension" + Directory.GetCurrentDirectory() + @"\ohahllgiabjaoigichmmfljhkcfikeof");
             using (ChromeDriver driver = new ChromeDriver(options))
             {
                 driver.Manage().Timeouts().PageLoad = TimeSpan.FromMilliseconds(10000);
