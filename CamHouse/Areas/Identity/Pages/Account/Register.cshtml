@@ -1,0 +1,59 @@
+﻿@page
+@model RegisterModel
+@{
+    Layout = "~/Pages/Layout/_RegisterLayout.cshtml";
+}
+<!-- Start Body Login -->
+<div class="Body-Register">
+    <!-- Body Login -->
+    <div class="row Row-mid">
+        <div class="col col-md-4 col-img">
+            <img src="~/Img/register.png" alt="Login Img" id="imglogin" />
+            <div class="Social-login">
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-discord'></i></a>
+                <a href=""><i class='bx bxl-facebook'></i></a>
+            </div>
+        </div>
+        <div class="col col-md-1">
+        </div>
+        <div class="col col-md-4 col-form">
+            <h1 id="Title-login">Register</h1>
+            <h4 id="Subtitle-login">
+                Hey sei nuovo su questo sito!
+                <br>Qui sotto ti propongo dei campi da compilare obligatoriamente per poterti registrare al nostro servizio.
+            </h4>
+            <section>
+                <form asp-route-returnUrl="@Model.ReturnUrl" id="account" method="post">
+                    <!-- Trasformazione form in div -->
+                    <div id="EForm form-group">
+                        <input type="email" asp-for="Input.Email" id="e-check" placeholder="Email"
+                               autocomplete="off" />
+                        <span id="e-msg" asp-validation-for="Input.Email"></span>
+                    </div>
+                    <div id="PForm form-group">
+                        <input asp-for="Input.Password" type="password" id="psw-check" placeholder="Password" />
+                        <span id="p-msg" asp-validation-for="Input.Password"></span>
+                    </div>
+                    <div id="CPForm form-group">
+                        <input asp-for="Input.ConfirmPassword" type="password" id="conf-psw-check" placeholder="Conferma Password" />
+                        <span id="p-msg" asp-validation-for="Input.ConfirmPassword"></span>
+                    </div>
+                    <div id="SForm form-group">
+                        <input type="submit" id="SubmitLogin" value="Registrami" />
+                    </div>
+                    <div id="Registrati form-group">
+                        <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl" class="LoginRegister"><i class='bx bxs-user-plus' style="font-size: 32px; position:absolute; transform: translateX(-50px);"></i>Loggati</a>
+                    </div>
+                    <!-- Trasformazione finita -->
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- End Body Login -->
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

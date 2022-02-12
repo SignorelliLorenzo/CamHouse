@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CamHouse</title>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device, initial-scale=1.0">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="~/css/IndexStyle.css">
+    <link rel="icon" href="~/Img/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Scripts -->
+    <script src="~/js/IndexJS.js"></script>
+</head>
+<body>
+
+    <!-- Loader Start -->
+    <div id="loader-body" class="loader">
+        <div class="navbarcustom">
+            <ul>
+                <li style="float: left;" class="loader-nav-namelogo">
+                    <a>Cam<br>House</a>
+                </li>
+                <li id="load-button" class="loader-nav-join">
+                    <!-- Function per rimuovere la pagina di loading, usando javascript trovi la funzione RemovePageLoader() in IndexJS.js -->
+                    <a onclick="RemovePageLoader()">Join Now</a>
+                </li>
+            </ul>
+        </div>
+        <div class="loader-img">
+            <img src="~/Img/sfondo.gif" alt="ImgOnFirstTimeLog" loop=infinite>
+        </div>
+    </div>
+    <!-- Loader End -->
+    <!-- Body Site Really -->
+    <div class="RealBody">
+        @inject SignInManager<IdentityUser> SignInManager
+        @inject UserManager<IdentityUser> UserManager
+        <!-- Navbar -->
+        <div class="navbarcustom">
+            <ul>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    @*<li class="RealBodyLinksNav">
+                <a asp-area="Identity" asp-page="/Account/Register">Account</a>
+            </li>*@
+                    <li style="float: left;" class="loader-nav-namelogo">
+                        <a>Cam<br>House</a>
+                    </li>
+
+                    <li class="RealBodyLinksNav">
+                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                            <button type="submit" class="logout"><i class='bx bx-exit' style="font-size: 30px; transform: translateY(3px);"></i>@User.Identity.Name</button>
+                        </form>
+                    </li>
+                    <li class="RealBodyLinksNav">
+                        <a asp-area="" asp-page="/Create">Create</a>
+                    </li>
+                    <li class="RealBodyLinksNav">
+                        <a asp-area="" asp-page="/View">View</a>
+                    </li>
+                    <li class="RealBodyLinksNav">
+                        <a asp-area="" asp-page="/Index"><i class='bx bx-home-alt' style="font-size: 30px; transform: translateY(3px);"></i>Home</a>
+                    </li>
+                }
+                else
+                {
+                    <li style="float: left;" class="loader-nav-namelogo">
+                        <a>Cam<br>House</a>
+                    </li>
+                    <li class="RealBodyLinksNav">
+                        <a asp-area="Identity" asp-page="/Account/Login">Account</a>
+                    </li>
+                }
+            </ul>
+        </div>
+        @RenderBody()
+    </div>
+    <!--  -->
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

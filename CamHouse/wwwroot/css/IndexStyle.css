@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.navbarcustom {
+    margin: 0;
+    padding: 0;
+    height: 124px;
+}
+
+.navbarcustom ul {
+    list-style-type: none;
+    margin: 0; 
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+.navbarcustom li{
+    float: right;
+}
+
+.loader-nav-namelogo{
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 0px 10px 30px;
+    text-align: left;
+    color: black;
+    font-size: 32px;
+}
+
+.loader-nav-join{
+    display: inline-block;
+    margin: 26px;
+    padding: 20px;
+    border: 1px solid gray;
+    width: 200px;
+    text-align: center;
+}
+
+.loader-nav-join a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+.loader-nav-join:hover{
+    display: inline-block;
+    border: 1px solid white;
+    transition: all 1s;
+    background-color: black;
+}
+
+.loader-nav-join:hover a{
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.loader-img{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.loader-img img{
+    width: 100%;
+    height: 845px;
+}
+
+.loader-img-text{
+    position: absolute;
+    bottom: 40px;
+    color: white;
+    text-align: left;
+    font-size: 72px;
+    padding-left: 20px;
+}
+
+.RealBodyLinksNav{
+    display: inline-block;
+    margin: 24px 10px 22px 10px;
+    padding: 20px 10px 20px 10px;
+    width: 150px;
+    height: 80px;
+    text-align: center;
+}
+
+.RealBodyLinksNav a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+}
+
+.RealBodyLinksNav a:hover{
+    text-decoration: none;
+}
+
+.logout {
+    width: 300px;
+    font-size: 22px;
+    background-color: white;
+}

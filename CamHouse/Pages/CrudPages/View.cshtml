@@ -1,0 +1,41 @@
+﻿@page
+@model ViewModel
+@{
+    Layout = "~/Pages/Layout/_ViewLayout.cshtml";
+    ViewData["Title"] = "Home page";
+}
+
+<table class="table table-striped table-dark">
+
+    <tr>
+
+        <th>Nome</th>
+        <th>Link</th>
+        <th>Numero Like</th>
+        <th>Numero Salvati</th>
+        
+        <th><b><a style="color:darkorange" asp-page="./Create">Create New</a></b></th>
+    </tr>
+
+
+
+    <tbody>
+        @foreach (var item in Model.elecamere)
+        {
+            <tr>
+                <td>@item.nome</td>
+                <td>@item.link</td>
+                <td>@item.num_like</td>
+                <td>@item.num_salvati</td>
+                
+
+                <td>
+                    <b><a style="color:darkorange" asp-page="./Edit" asp-route-id="@item.id">Edit</a></b>
+                   
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
