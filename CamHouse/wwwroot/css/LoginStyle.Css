@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Space+Grotesk:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
     margin: 0;
@@ -127,13 +128,18 @@
     margin: 10px 10% 0 10%;
 }
 
+#Psw_forgot_text a, #Resend_Verify_Text a{
+    color: #266352;
+    text-decoration: none;
+}
+
 #EndFormsLinks {
     margin: 10px 0 10px 0;
 }
 
-    #EndFormsLinks a {
-        text-decoration: none;
-    }
+#EndFormsLinks a {
+    text-decoration: none;
+}
 
 #Title-login {
     text-align: center;
@@ -160,7 +166,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .Social-login {
@@ -245,6 +251,7 @@
         color: black;
         text-align: center;
         font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
     }
 
         .RealBodyLinksNav a:hover {
@@ -263,6 +270,7 @@
     text-align: left;
     color: black;
     font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

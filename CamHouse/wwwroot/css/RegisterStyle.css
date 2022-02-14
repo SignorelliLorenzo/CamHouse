@@ -1,6 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Space+Grotesk:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -244,6 +244,7 @@
         color: black;
         text-align: center;
         font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
     }
 
         .RealBodyLinksNav a:hover {
@@ -262,6 +263,7 @@
     text-align: left;
     color: black;
     font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

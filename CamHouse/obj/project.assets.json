@@ -7493,23 +7493,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\garlini.17185\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\elena\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
+      "projectUniqueName": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
       "projectName": "CamHouse",
-      "projectPath": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
-      "packagesPath": "C:\\Users\\garlini.17185\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\obj\\",
+      "projectPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
+      "packagesPath": "C:\\Users\\elena\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\garlini.17185\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\elena\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7580,7 +7576,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
