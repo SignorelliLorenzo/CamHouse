@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Api_Pcto.Models.DTOS.Requests
+namespace Api_Telecamere_Library.Models.DTOS.Requests
 {
     /// <summary>
     /// Oggetto DTO, Deve essere fornito dall' utente che intende effettuare la creazione di una telecamera.

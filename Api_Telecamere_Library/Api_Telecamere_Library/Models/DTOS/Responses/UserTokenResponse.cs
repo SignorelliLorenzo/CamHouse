@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Api_Pcto.Models.DTOS.Responses
+namespace Api_Telecamere_Library.Models.DTOS.Responses
 {
     public class UserTokenResponse
     {

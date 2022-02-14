@@ -6,10 +6,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Api_Pcto;
-using Api_Pcto.Config;
-using Api_Pcto.Models.DTOS.Requests;
-using Api_Pcto.Models.DTOS.Responses;
+using Api_Telecamere_Library.Config;
+using Api_Telecamere_Library.Models.DTOS.Requests;
+using Api_Telecamere_Library.Models.DTOS.Responses;
 using Newtonsoft.Json;
 
 namespace Api_Telecamere_Library

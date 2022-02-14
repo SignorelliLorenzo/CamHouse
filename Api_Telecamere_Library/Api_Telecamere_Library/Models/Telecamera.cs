@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 //https://newswwc.com/technology/dotnet-technologies/using-dapper-with-asp-net-core-web-api-code-maze/
-namespace Api_Pcto
+namespace Api_Telecamere_Library
 {
     /// <summary>
     /// Classe base di Telecamera_Data.

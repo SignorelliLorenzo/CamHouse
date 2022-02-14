@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Api_Pcto.Models.DTOS.Requests
+namespace Api_Telecamere_Library.Models.DTOS.Requests
 {
     
     public class RegistrationRequest

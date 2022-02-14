@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Api_Pcto.Config
+namespace Api_Telecamere_Library.Config
 {
     public class AuthResult
     {
