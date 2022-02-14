@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Api_Pcto;
+using Api_Pcto.Config;
 using Api_Pcto.Models.DTOS.Requests;
 using Api_Pcto.Models.DTOS.Responses;
 using Newtonsoft.Json;
@@ -15,35 +16,15 @@ namespace Api_Telecamere_Library
 {
     public class MyApiService
     {
-        private readonly static string url = "https://localhost:44302/api/";
-        public async Task<UserRegistrationResponse> RegisterAsync(RegistrationRequest user, string token)
-        {
-            HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-
-            var myContent = JsonConvert.SerializeObject(user);
-
-            var buffer = Encoding.UTF8.GetBytes(myContent);
-            var byteContent = new ByteArrayContent(buffer);
-
-
-            byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-
-
-            var result = await client.PostAsync(url + "Authentication/Register", byteContent);
-
-            string resultContent = result.Content.ReadAsStringAsync().Result;
-        }
-
-        public static async Task<List<Telecamera_Data>> GetAllAsync(string token)
+        private readonly static string url = "https://localhost:44302/";
+        public static async Task<List<Telecamera_Data>> GetAll(string token)
         {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 
             try
             {
-                var result = await client.GetStringAsync(url + "Telecamere");
+                var result = await client.GetStringAsync(url + "api/Telecamere");
 
                 List<Telecamera_Data> lista = JsonConvert.DeserializeObject<List<Telecamera_Data>>(result);
 
@@ -53,6 +34,7 @@ namespace Api_Telecamere_Library
             {
                 return null;
             }
+
         }
 
         public static async Task<GetTelecameraPerIdResponse> GetByIdAsync(int id, string token)
@@ -61,7 +43,7 @@ namespace Api_Telecamere_Library
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             try
             {
-                var result = await client.GetStringAsync(url + $"Telecamere/id {id}");
+                var result = await client.GetStringAsync(url + $"api/Telecamere/id {id}");
 
                 GetTelecameraPerIdResponse response = JsonConvert.DeserializeObject<GetTelecameraPerIdResponse>(result);
 
@@ -86,7 +68,7 @@ namespace Api_Telecamere_Library
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             try
             {
-                var result = await client.GetStringAsync(url + $"Telecamere/nome {name}");
+                var result = await client.GetStringAsync(url + $"api/Telecamere/nome {name}");
 
                 GetTelecameraPerNomeResponse response = JsonConvert.DeserializeObject<GetTelecameraPerNomeResponse>(result);
                 return response;
@@ -103,14 +85,13 @@ namespace Api_Telecamere_Library
                 };
             }
         }
-
         public static async Task<GetTelecameraRandomResponse> GetRandomAsync(string token)
         {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
             try
             {
-                var result = await client.GetStringAsync(url + $"Telecamere/random");
+                var result = await client.GetStringAsync(url + $"api/Telecamere/random");
 
                 GetTelecameraRandomResponse response = JsonConvert.DeserializeObject<GetTelecameraRandomResponse>(result);
                 return response;
@@ -130,7 +111,7 @@ namespace Api_Telecamere_Library
 
         public static async Task<CreaTelecameraResponse> PostAsync(CreaTelecameraRequest request, string token)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + "Telecamere");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + "api/Telecamere");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             httpWebRequest.Headers.Add("Authorization", "Bearer " + token);
@@ -167,7 +148,7 @@ namespace Api_Telecamere_Library
 
         public static async Task<ModificaTelecameraResponse> PutAsync(ModificaTelecameraRequest request, string token)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + "Telecamere");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + "api/Telecamere");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "PUT";
             httpWebRequest.Headers.Add("Authorization", "Bearer " + token);
@@ -204,7 +185,7 @@ namespace Api_Telecamere_Library
 
         public static async Task<EliminaTelecameraResponse> DeleteAsync(int id, string token)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + $"Telecamere/{id}");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + $"api/Telecamere/{id}");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "DELETE";
             httpWebRequest.Headers.Add("Authorization", "Bearer " + token);
@@ -222,6 +203,79 @@ namespace Api_Telecamere_Library
             catch (Exception ex)
             {
                 return new EliminaTelecameraResponse()
+                {
+                    Success = false,
+                    Errors = new List<string>
+                    {
+                        ex.Message
+                    }
+                };
+            }
+        }
+
+        public static async Task<UserRegistrationResponse> RegisterAsync(RegistrationRequest request, string token)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + "api/Authentication/Register");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+            httpWebRequest.Headers.Add("Authorization", "Bearer " + token);
+            try
+            {
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = JsonConvert.SerializeObject(request);
+
+                    streamWriter.Write(json);
+                }
+
+                var httpResponse = (HttpWebResponse)await httpWebRequest.GetResponseAsync();
+                UserRegistrationResponse response;
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    response = JsonConvert.DeserializeObject<UserRegistrationResponse>(result);
+                }
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new UserRegistrationResponse()
+                {
+                    Success = false,
+                    Errors = new List<string>
+                    {
+                        ex.Message
+                    }
+                };
+            }
+        }
+        public static async Task<AuthResult> LoginAsync(LoginRequest request, string token)
+        {
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url + "api/Authentication/Login");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+            httpWebRequest.Headers.Add("Authorization", "Bearer " + token);
+            try
+            {
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = JsonConvert.SerializeObject(request);
+
+                    streamWriter.Write(json);
+                }
+
+                var httpResponse = (HttpWebResponse)await httpWebRequest.GetResponseAsync();
+                AuthResult response;
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    response = JsonConvert.DeserializeObject<AuthResult>(result);
+                }
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new AuthResult()
                 {
                     Success = false,
                     Errors = new List<string>

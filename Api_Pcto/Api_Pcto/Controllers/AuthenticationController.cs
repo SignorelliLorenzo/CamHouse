@@ -48,26 +48,26 @@ namespace Api_Pcto.Controllers
                 var ExistingUser = await _userManager.FindByEmailAsync(user.Email);
                 if (ExistingUser != null)
                 {
-                    return BadRequest(new UserRegistrationResponse()
+                    return new UserRegistrationResponse()
                     {
                         Errors = new List<string>()
                         {
                             "Email Gia In Utilizzo"
                         },
                         Success = false
-                    });
+                    };
                 }
                 var ExistingUserByUsername = await _userManager.FindByNameAsync(user.Email);
                 if (ExistingUserByUsername != null)
                 {
-                    return BadRequest(new UserRegistrationResponse()
+                    return new UserRegistrationResponse()
                     {
                         Errors = new List<string>()
                         {
                             "Username Gia in Utilizzo"
                         },
                         Success = false
-                    });
+                    };
                 }
                 var NewUser = new UserModel() { Email = user.Email, UserName = user.Email };
                 var IsCreated = await _userManager.CreateAsync(NewUser, user.Password);
@@ -80,32 +80,32 @@ namespace Api_Pcto.Controllers
                 if (IsCreated.Succeeded)
                 {
                     await userTokenManager.AddUserToken(NewUserToken);
-                    return Ok(new UserRegistrationResponse()
+                    return new UserRegistrationResponse()
                     {
                         Success = true,
                         Token = NewUserToken.Token,
                         Errors = null,
                         Username = NewUser.UserName
-                    });
+                    };
 
                 }
                 else
                 {
-                    return BadRequest(new UserRegistrationResponse()
+                    return new UserRegistrationResponse()
                     {
                         Errors = IsCreated.Errors.Select(x => x.Description).ToList(),
                         Success = false
-                    }); 
+                    }; 
                 }
             }
-            return BadRequest(new UserRegistrationResponse()
+            return new UserRegistrationResponse()
             {
                 Errors = new List<string>()
                 {
                     "Invalid payload"
                 },
                 Success = false
-            });
+            };
         }
 
         private string GenerateJwtToken(IdentityUser user)
