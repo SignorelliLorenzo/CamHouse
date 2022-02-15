@@ -1,5 +1,5 @@
 ﻿using CamHouse.Data;
-using CamHouse.Model;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -8,6 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Api_Telecamere_Library;
+using Api_Telecamere_Library.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace CamHouse.Pages
 {
@@ -16,21 +19,31 @@ namespace CamHouse.Pages
 
     public class ViewModel : PageModel
     {
-
+        public IConfiguration Configuration { get; }
         private readonly AppDbContext _context;
-        public ViewModel(AppDbContext context)
+  
+        public ViewModel(AppDbContext context, IConfiguration configuration)
         {
             this._context = context;
+            Configuration = configuration;
             elecamere = _context.CameraAppDb.ToList();
+            
         }
         [BindProperty]
-        public Camera camera { get; set; }
+        public Telecamera_Data camera { get; set; }
         [BindProperty]
-        public IList<Camera> elecamere { get; set; }
+        public IList<Telecamera_Data> elecamere { get; set; }
 
-        public void OnGet(string searchString, string Ordina)
-        {
-            
+        public void OnGet()
+        {           
+            try
+            {
+               elecamere = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+            }
+            catch
+            {
+
+            }
         }
       
     }

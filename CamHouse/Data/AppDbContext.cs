@@ -1,4 +1,5 @@
-﻿using CamHouse.Model;
+﻿using Api_Telecamere_Library;
+
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,6 +14,6 @@ namespace CamHouse.Data
             : base(options)
         {
         }
-        public DbSet<Camera> CameraAppDb { get; set; }
+        public DbSet<Telecamera_Data> CameraAppDb { get; set; }
     }
 }
