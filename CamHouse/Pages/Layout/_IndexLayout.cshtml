@@ -45,26 +45,20 @@
             <ul>
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    @*<li class="RealBodyLinksNav">
-                        <a asp-area="Identity" asp-page="/Account/Register">Account</a>
-                    </li>*@
+
                     <li style="float: left;" class="loader-nav-namelogo">
                         <a>Cam<br>House</a>
                     </li>
-
                     <li class="RealBodyLinksNav">
                         <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                            <button type="submit" class="logout"><i class='bx bx-exit' style="font-size: 30px; transform: translateY(3px);"></i>@User.Identity.Name</button>
+                            <button type="submit" class="logout"><i class='bx bx-exit'></i>@User.Identity.Name</button>
                         </form>
-                    </li>
-                    <li class="RealBodyLinksNav">
-                        <a asp-area="" asp-page="/Create">Create</a>
                     </li>
                     <li class="RealBodyLinksNav">
                         <a asp-area="" asp-page="/CrudPages/View">View</a>
                     </li>
                     <li class="RealBodyLinksNav">
-                        <a asp-area="" asp-page="/Index"><i class='bx bx-home-alt' style="font-size: 30px; transform: translateY(3px);"></i>Home</a>
+                        <a asp-area="" asp-page="/Index"><i class='bx bx-home-alt bxhomeicon'></i>Home</a>
                     </li>
                 }
                 else

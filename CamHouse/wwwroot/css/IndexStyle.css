@@ -193,3 +193,9 @@
     transform: translateY(6px);
     margin-right: 30px;
 }
+
+.bxhomeicon {
+    background-color: white;
+    transform: translateY(5px);
+    font-size: 30px;
+}

@@ -1,71 +1,142 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿
+.navbarcustom {
+    margin: 0;
+    padding: 0;
+    height: 124px;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
+    .navbarcustom ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+    }
+
+    .navbarcustom li {
+        float: right;
+        background-color: white;
+    }
+
+.RealBodyLinksNav {
+    display: inline-block;
+    margin: 24px 10px 22px 10px;
+    padding: 20px 10px 20px 10px;
+    width: 150px;
+    height: 80px;
+    text-align: center;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    .RealBodyLinksNav a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
+    }
+
+        .RealBodyLinksNav a:hover {
+            text-decoration: none;
+        }
+
+        .RealBodyLinksNav a, .loader-nav-namelogo a, .RealBodyLinksNav a i {
+            background-color: white;
+        }
+
+.loader-nav-namelogo {
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 0px 10px 30px;
+    text-align: left;
+    color: black;
+    font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.Body-view {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.cardcustom {
+    display: grid;
+    width: 350px;
+    grid-template-columns: 350px;
+    grid-template-rows: 310px 210px;
+    grid-area: "cardcustom-image" "cardcustom-text";
+    font-family: roboto;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.cardcustom-image {
+    grid-area: "cardcustom-image";
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    .cardcustom-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+.cardcustom-text {
+    grid-area: "cardcustom-text";
+    margin: 25px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+    .cardcustom-text p {
+        color: gray;
+        font-size: 20px;
+        text-align: left;
+        margin: 5px;
+    }
+
+    .cardcustom-text span{
+        text-align: left;
+        display: block;
+    }
+
+    .cardcustom-text b {
+        color: black;
+    }
+
+    .cardcustom-text hr {
+        margin: 20px 5px 20px 5px;
+    }
+
+.BtnGo {
+    color: #266352;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 75px 10px 75px;
+    border-radius: 15px 0 15px 0;
+    border: 2px solid #128061;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    .BtnGo:hover {
+        border-radius: 0 15px 0 15px;
+        color: #266352;
+    }
+
+.bxhomeicon {
+    background-color: white;
+    transform: translateY(5px);
+    font-size: 30px;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 480px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
 }
