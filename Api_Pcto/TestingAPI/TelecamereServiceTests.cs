@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Api_Pcto.Data;
+using Api_Pcto.Models.DTOS.Responses;
 
 namespace Api_Pcto.Models.Tests
 {
@@ -69,7 +70,14 @@ namespace Api_Pcto.Models.Tests
         {
             _fixture = fixture;
         }
+        [Fact()]
+        public void PostTest_CreateNew()
+        {
+            var x = new TelecamereService(_fixture._ContextTest);
 
+            var result = x.Post(new DTOS.Requests.CreaTelecameraRequest { nome = "Firenze", link = "", num_like = 20, num_salvati = 100 }).Result;
+            Assert.True(result.Success && _fixture._ContextTest.eletelecamere.Where(x=>x.nome == "Firenze").Count() == 1, "Non si riesce a creare la telecamera");
+        }
         [Fact()]
         public void GetAllTest()
         {
@@ -92,33 +100,70 @@ namespace Api_Pcto.Models.Tests
             Assert.True(!result.Success, "La funzione non restituisce errore per una telecamera inesistente");
         }
         [Fact()]
-        public void GetByNameTest()
+        public void GetByNameTest_NameFound()
         {
-            Assert.True(false, "This test needs an implementation");
+            var x = new TelecamereService(_fixture._ContextTest);
+            var result = x.GetByName("Londra").Result;
+            Assert.True(result.Success, "Non si riesce a ricavare la telecamera");
+        }
+        [Fact()]
+        public void GetByNameTest_NoName()
+        {
+            var x = new TelecamereService(_fixture._ContextTest);
+            var result = x.GetByName("Palermo").Result;
+            Assert.True(!result.Success, "La funzione non restituisce errore per una telecamera inesistente");
         }
 
         [Fact()]
         public void GetRandomTest()
         {
-            Assert.True(false, "This test needs an implementation");
+            var x = new TelecamereService(_fixture._ContextTest);
+            var result = x.GetRandom().Result;
+            Assert.True(result.Success, "Non si riesce a ricavare la telecamera");
+        }
+
+       
+        //[Fact()]
+        //public void PostTest_AlreadyExists()
+        //{
+        //    var x = new TelecamereService(_fixture._ContextTest);
+        //    var result = x.Post(new DTOS.Requests.CreaTelecameraRequest { nome = "Bergamo", link = "link", num_like = 3, num_salvati = 40 }).Result;
+        //    Assert.True(!result.Success, "La funzione non restituisce errore per una telecamera già esistente");
+        //}
+  
+
+        [Fact()]
+        public void PutTest_Found()
+        {
+            var x = new TelecamereService(_fixture._ContextTest);
+            
+            var result = x.Put(new DTOS.Requests.ModificaTelecameraRequest { telecamera = new Telecamera("Hong Kong", "link", 3, 40) {id=1} }).Result;
+            Assert.True(result.Success && _fixture._ContextTest.eletelecamere.Where(x=>x.id == 1 && x.nome== "Hong Kong").Count() == 1, "Non si riesce a modificare la telecamera");
+        }
+        [Fact()]
+        public void PutTest_NotFound()
+        {
+            var x = new TelecamereService(_fixture._ContextTest);
+            var result = x.Put(new DTOS.Requests.ModificaTelecameraRequest { telecamera = new Telecamera("Hong Kong", "link", 3, 40) { id = 33 } }).Result;
+            Assert.True(!result.Success, "La funzione non restituisce errore quando si modifica una telecamera inesistente");
         }
 
         [Fact()]
-        public void PostTest()
+        public void DeleteTest_Found()
         {
-            Assert.True(false, "This test needs an implementation");
+            var x = new TelecamereService(_fixture._ContextTest);
+
+            var result = x.Delete(2).Result;
+            Assert.True(result.Success && _fixture._ContextTest.eletelecamere.Where(x => x.id == 2 && x.nome == "Bergamo").Count() == 0, "Non si riesce a modificare la telecamera");
         }
 
         [Fact()]
-        public void PutTest()
+        public void DeleteTest_NotFound()
         {
-            Assert.True(false, "This test needs an implementation");
-        }
+            var x = new TelecamereService(_fixture._ContextTest);
 
-        [Fact()]
-        public void DeleteTest()
-        {
-            Assert.True(false, "This test needs an implementation");
+            var result = x.Delete(33).Result;
+            Assert.True(!result.Success, "La funzione non restituisce errore quando si modifica una telecamera inesistente");
         }
     }
 }
