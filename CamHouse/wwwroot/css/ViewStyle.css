@@ -55,8 +55,8 @@
 }
 
 .Body-view {
-    width: 80vw;
-    height: 100vh;
+    width: 98vw;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,10 +129,55 @@
 
 .bxhomeicon {
     background-color: white;
-    transform: translateY(5px);
-    font-size: 30px;
+    font-size: 24px;
 }
 
+.bxlogout {
+    font-size: 30px;
+    transform: translateY(5px);
+}
+
+.RealBodyLinksNavLogout {
+    display: inline-block;
+    margin: 20px 30px 20px 10px;
+    padding: 20px 10px 20px 10px;
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    background-color: white;
+}
+
+    .RealBodyLinksNavLogout button {
+        text-decoration: none;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        border: 1px solid #266352;
+        width: 300px;
+        border-radius: 0 15px 0 15px;
+        color: #128061;
+        background-color: white;
+    }
+
+        .RealBodyLinksNavLogout button:hover {
+            text-decoration: none;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Montserrat Alternates', sans-serif;
+            border: 1px solid #266352;
+            width: 300px;
+            border-radius: 15px 0 15px 0;
+            color: #b5f7e6;
+            background-color: #128061;
+        }
+
+    .RealBodyLinksNavLogout .bxlogout:hover {
+        background-color: #128061;
+    }
+
+.LOForm {
+    background-color: white;
+}
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 480px) {
 }

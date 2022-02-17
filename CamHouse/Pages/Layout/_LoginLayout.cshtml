@@ -31,9 +31,9 @@
                     <li style="float: left;" class="loader-nav-namelogo">
                         <a>Cam<br>House</a>
                     </li>
-                    <li class="RealBodyLinksNav">
-                        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                            <button type="submit" class="logout"><i class='bx bx-exit'></i>@User.Identity.Name</button>
+                    <li class="RealBodyLinksNavLogout">
+                        <form class="form-inline LOForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                            <button href="" type="submit" class="logout"><i class='bx bx-exit bxlogout'></i> @User.Identity.Name</button>
                         </form>
                     </li>
                     <li class="RealBodyLinksNav">

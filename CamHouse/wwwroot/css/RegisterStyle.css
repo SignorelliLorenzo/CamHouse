@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #b5f7e6;
     box-sizing: border-box;
 }
 
@@ -15,7 +14,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 75vh;
+    height: 100vh;
+    background-color: #b5f7e6;
 }
 
 
@@ -42,6 +42,7 @@
     text-align: center;
     outline: #53c0a2 2px;
     padding: 10px;
+    background-color: #b5f7e6;
     border: 2px solid #53c0a2;
     border-radius: 5px;
 }
@@ -59,6 +60,7 @@
     margin: 10px 0 0 0px;
     color: #266352;
     text-align: center;
+    background-color: #b5f7e6;
     outline: #53c0a2 2px;
     padding: 10px;
     border: 2px solid #53c0a2;
@@ -73,18 +75,20 @@
     padding: 10px;
     color: #266352;
     text-align: center;
+    background-color: #b5f7e6;
     outline: #53c0a2 1px;
     border: 2px solid #53c0a2;
     border-radius: 5px;
 }
 
 /* Input Submit Registrati */
-#SubmitLogin {
+#SubmitRegister {
     font-size: 24px;
     margin: 10px 0 0 0px;
     width: 500px;
     color: #266352;
     text-align: center;
+    background-color: #b5f7e6;
     padding: 5px;
     font-weight: bold;
     padding: 5px;
@@ -118,7 +122,7 @@
         display: inline-block;
         border: 2px solid #128061;
         transition: all 1s;
-        color: #53c0a2;
+        color: #128061;
         border-radius: 5px 30px 5px 30px;
     }
 
@@ -272,6 +276,52 @@
     font-size: 30px;
 }
 
+.bxlogout {
+    font-size: 30px;
+    transform: translateY(5px);
+}
+
+.RealBodyLinksNavLogout {
+    display: inline-block;
+    margin: 20px 30px 20px 10px;
+    padding: 20px 10px 20px 10px;
+    width: 320px;
+    height: 80px;
+    text-align: center;
+    background-color: white;
+}
+
+    .RealBodyLinksNavLogout button {
+        text-decoration: none;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        border: 1px solid #266352;
+        width: 300px;
+        border-radius: 0 15px 0 15px;
+        color: #128061;
+        background-color: white;
+    }
+
+        .RealBodyLinksNavLogout button:hover {
+            text-decoration: none;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Montserrat Alternates', sans-serif;
+            border: 1px solid #266352;
+            width: 300px;
+            border-radius: 15px 0 15px 0;
+            color: #b5f7e6;
+            background-color: #128061;
+        }
+
+    .RealBodyLinksNavLogout .bxlogout:hover {
+        background-color: #128061;
+    }
+
+.LOForm {
+    background-color: white;
+}
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 480px) {
 }
