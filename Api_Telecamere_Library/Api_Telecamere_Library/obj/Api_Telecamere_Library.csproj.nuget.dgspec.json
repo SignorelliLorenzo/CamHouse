@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj": {}
+    "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj": {
+    "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
+        "projectUniqueName": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
         "projectName": "Api_Telecamere_Library",
-        "projectPath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
-        "packagesPath": "C:\\Users\\ghilardi.17186\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\obj\\",
+        "projectPath": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
+        "packagesPath": "C:\\Users\\garlini.17185\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ghilardi.17186\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\garlini.17185\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

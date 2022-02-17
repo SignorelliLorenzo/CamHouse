@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rkHYNYoA7sEZWD7gS+N1gtaVIsMGKOWWalxppOb8jTlezaXLlIZV+2vPV5Ue8Rh3j+VH7xwjQU48DR95JyvHbg==",
+  "dgSpecHash": "zYVsLnykUknRn46vGMXOiiXQaR6DMKqCJ1eP3+ksQpfWSglvkKWqZ8WfcA1lFC4gsqL1Ree9rzID69h+X/AjGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
+  "projectFilePath": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
@@ -56,7 +56,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.linq\\4.1.0\\system.linq.4.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
-    "C:\\Users\\ghilardi.17186\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\garlini.17185\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection\\4.1.0\\system.reflection.4.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.reflection.emit\\4.0.1\\system.reflection.emit.4.0.1.nupkg.sha512",
