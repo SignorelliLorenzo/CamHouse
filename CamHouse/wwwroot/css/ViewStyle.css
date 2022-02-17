@@ -1,0 +1,142 @@
+﻿
+.navbarcustom {
+    margin: 0;
+    padding: 0;
+    height: 124px;
+}
+
+    .navbarcustom ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+    }
+
+    .navbarcustom li {
+        float: right;
+        background-color: white;
+    }
+
+.RealBodyLinksNav {
+    display: inline-block;
+    margin: 24px 10px 22px 10px;
+    padding: 20px 10px 20px 10px;
+    width: 150px;
+    height: 80px;
+    text-align: center;
+}
+
+    .RealBodyLinksNav a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
+    }
+
+        .RealBodyLinksNav a:hover {
+            text-decoration: none;
+        }
+
+        .RealBodyLinksNav a, .loader-nav-namelogo a, .RealBodyLinksNav a i {
+            background-color: white;
+        }
+
+.loader-nav-namelogo {
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 0px 10px 30px;
+    text-align: left;
+    color: black;
+    font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.Body-view {
+    width: 80vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cardcustom {
+    display: grid;
+    width: 350px;
+    grid-template-columns: 350px;
+    grid-template-rows: 310px 210px;
+    grid-area: "cardcustom-image" "cardcustom-text";
+    font-family: roboto;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+.cardcustom-image {
+    grid-area: "cardcustom-image";
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+    .cardcustom-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+.cardcustom-text {
+    grid-area: "cardcustom-text";
+    margin: 25px;
+}
+
+    .cardcustom-text p {
+        color: gray;
+        font-size: 20px;
+        text-align: left;
+        margin: 5px;
+    }
+
+    .cardcustom-text span{
+        text-align: left;
+        display: block;
+    }
+
+    .cardcustom-text b {
+        color: black;
+    }
+
+    .cardcustom-text hr {
+        margin: 20px 5px 20px 5px;
+    }
+
+.BtnGo {
+    color: #266352;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 75px 10px 75px;
+    border-radius: 15px 0 15px 0;
+    border: 2px solid #128061;
+}
+
+    .BtnGo:hover {
+        border-radius: 0 15px 0 15px;
+        color: #266352;
+    }
+
+.bxhomeicon {
+    background-color: white;
+    transform: translateY(5px);
+    font-size: 30px;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 480px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}

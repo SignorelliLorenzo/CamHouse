@@ -1,0 +1,68 @@
+﻿@page
+@model LoginModel
+@{
+    Layout = "~/Pages/Layout/_LoginLayout.cshtml";
+}
+
+<div class="Body-Login">
+    <!-- Body Login -->
+    <div class="row Row-mid">
+        <div class="col col-md-4 col-img">
+            <img src="~/Img/login.png" alt="Login Img" id="imglogin" />
+            <div class="Social-login">
+                <a href=""><i class='bx bxl-instagram'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-discord'></i></a>
+                <a href=""><i class='bx bxl-facebook'></i></a>
+            </div>
+        </div>
+        <div class="col col-md-1">
+        </div>
+        <div class="col col-md-4 col-form">
+            <h1 id="Title-login">Login</h1>
+            <h4 id="Subtitle-login">
+                Hey! Benevenuto nella pagina "LOGIN" qui potrai accedere al tuo account, se non sei ancora registrato usa il pulsante infondo
+            </h4>
+            <section>
+                <form id="account" method="post">
+                    <!-- Trasformazione form in div -->
+                    <div class="EForm form-group">
+                        <input type="email" asp-for="Input.Email" id="e-check" placeholder="Email"
+                               autocomplete="off" />
+                        <span id="e-msg" asp-validation-for="Input.Email"></span>
+                    </div>
+                    <div class="PForm form-group">
+                        <input asp-for="Input.Password" type="password" id="psw-check" placeholder="Password" />
+                        <span id="p-msg" asp-validation-for="Input.Password"></span>
+                    </div>
+                    <div class="RForm form-group">
+                        <label asp-for="Input.RememberMe" id="Ricordami_text" for="Ricordami"><input asp-for="Input.RememberMe" type="checkbox" id="Ricordami" name="Ricordami" />@Html.DisplayNameFor(m => m.Input.RememberMe)</label>
+                    </div>
+                    <div class="SForm form-group">
+                        <input type="submit" id="SubmitLogin" value="Login" />
+                    </div>
+                    <div class="EndFormsLinks form-group">
+                        <p id="Psw_forgot_text">
+                            <a asp-page="./ForgotPassword">
+                                (<i class='bx bxs-user-x'> Password dimenticata!</i>) Recuperala Ora.
+                            </a>
+                        </p>
+                        <p id="Resend_Verify_Text">
+                            <a asp-page="./ResendEmailConfirmation">
+                                (<i class='bx bx-paper-plane' style="font-size: 24px;"> Non ti è arrivata l'email?</i>) Rinvia Email.
+                            </a>
+                        </p>
+                    </div>
+                    <div class="Registrati form-group">
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="RegisterLogin"><i class='bx bxs-user-plus' style="font-size: 32px; position:absolute; transform: translateX(-50px);"></i>Crea un Account</a>
+                    </div>
+                    <!-- Trasformazione finita -->
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

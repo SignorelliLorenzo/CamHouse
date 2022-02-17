@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CamHouse"
   ],
-  "SelectedNode": "\\Api_Pcto.sln",
+  "SelectedNode": "\\CamHouse\\Api_Telecamere_Library.dll",
   "PreviewInSolutionExplorer": false
 }
