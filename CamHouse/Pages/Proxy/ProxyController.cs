@@ -26,20 +26,6 @@ namespace CamHouse.Pages.Proxy
             {
                 url = url.Replace("%2F","/").Replace("%3F","?");
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-                foreach (var key in httpWebRequest.Headers.AllKeys)
-                {
-                    httpWebRequest.Headers.Remove(httpWebRequest.Headers[key]);
-                }
-
-                foreach (var header in this.Request.Headers)
-                {
-                    
-                    httpWebRequest.Headers.Add(header.Key.Replace(":",""),header.Value);
-                }
-                httpWebRequest.ContentType = this.Request.ContentType;
-                httpWebRequest.Method = this.Request.Method;
-
-               
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
