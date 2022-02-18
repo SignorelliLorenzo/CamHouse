@@ -19,40 +19,44 @@ namespace CamHouse.Pages.Proxy
     {
         // GET api/<ProxyController>/"url"
         [HttpGet("url={url}")]
-        public HttpResponse Get(string url)
+        public IActionResult Get(string url)
         {
+            Byte[] bytes=null;
             try
             {
-                url = url.Replace("%2F","/");
+                url = url.Replace("%2F","/").Replace("%3F","?");
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
                 foreach (var key in httpWebRequest.Headers.AllKeys)
                 {
                     httpWebRequest.Headers.Remove(httpWebRequest.Headers[key]);
                 }
-                
+
                 foreach (var header in this.Request.Headers)
                 {
-                    httpWebRequest.Headers.Add(header.Key,);
+                    
+                    httpWebRequest.Headers.Add(header.Key.Replace(":",""),header.Value);
                 }
                 httpWebRequest.ContentType = this.Request.ContentType;
                 httpWebRequest.Method = this.Request.Method;
 
-            
+               
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
-                this.Response.StatusCode = (int)httpResponse.StatusCode;
-                this.Response.ContentType = httpResponse.ContentType;
-                foreach (var key in httpResponse.Headers.AllKeys)    
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
-                    this.Response.Headers.Add(key,httpResponse.Headers[key]);
+                    using (BinaryReader reader = new BinaryReader(httpResponse.GetResponseStream()))
+                    {
+                         bytes = reader.ReadBytes(1 * 1024 * 1024 * 10);
+                       
+                    }
                 }
-                this.Response.Body = httpResponse.GetResponseStream();
+                
             }
             catch (Exception ex)
             {
                 Response.StatusCode = 500;
             }
 
-            return this.Response;
+            return File(bytes, "image/jpg");
 
         }
         [HttpGet]
