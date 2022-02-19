@@ -517,3 +517,4 @@ C:\Users\LORY\source\repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\
 C:\Users\LORY\source\repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_LoginLayout.cshtml.g.cs
 C:\Users\LORY\source\repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_RegisterLayout.cshtml.g.cs
 C:\Users\LORY\source\repos\SignorelliLorenzo\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ViewLayout.cshtml.g.cs
+C:\Users\garlini.17185\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_PrivacyLayout.cshtml.g.cs

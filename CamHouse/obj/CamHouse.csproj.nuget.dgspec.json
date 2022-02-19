@@ -1,28 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj": {}
+    "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj": {
+    "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj",
+        "projectUniqueName": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
         "projectName": "CamHouse",
-        "projectPath": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\CamHouse.csproj",
-        "packagesPath": "C:\\Users\\LORY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LORY\\source\\repos\\SignorelliLorenzo\\CamHouse\\CamHouse\\obj\\",
+        "projectPath": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
+        "packagesPath": "C:\\Users\\garlini.17185\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\garlini.17185\\Source\\Repos\\CamHouse\\CamHouse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\LORY\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\garlini.17185\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -92,12 +88,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.13, 5.0.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -106,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }
