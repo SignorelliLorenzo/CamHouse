@@ -1,2 +1,177 @@
-﻿body {
+﻿* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
 }
+
+.Row-mid {
+    width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 500px;
+}
+
+.colcustom10 {
+    flex: 0 0 auto;
+    margin-top: 60px;
+    width: 83.33333333%;
+}
+
+.Zone-img {
+    padding: 30px;
+    text-align: center;
+}
+
+.Zone-img-view img{
+    width: 1200px;
+    height: 560px;
+}
+
+.Zone-img-stats{
+    margin-right: 15.5%;
+    padding: 10px 20px 20px 20px;
+    font-size: 24px;
+}
+
+    .Zone-img-stats a {
+        float: right;
+        margin: 0 10px 0 10px;
+    }
+
+.Zone-img-stats-title {
+    float: left;
+    padding: 20px;
+    margin-left: 17.7%;
+}
+
+.Zone-img-stats-like, .Zone-img-stats-pref {
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    overflow: hidden;
+    color: #b5f7e6;
+    padding: 20px;
+    background-color: #128061;
+    border-radius: 0 15px 0 15px;
+    outline: none;
+    text-align: center;
+    height: 75px;
+}
+
+.bx-like, .bx-bookmarks{
+    transform: translateY(4px);
+}
+
+    .Zone-img-stats-like:hover, .Zone-img-stats-pref:hover {
+        color: #128061;
+        background-color: #b5f7e6;
+    }
+
+    /**/
+    .navbarcustom {
+        margin: 0;
+        padding: 0;
+        height: 124px;
+    }
+
+    .navbarcustom ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: white;
+    }
+
+    .navbarcustom li {
+        float: right;
+        background-color: white;
+    }
+
+.RealBodyLinksNav {
+    display: inline-block;
+    margin: 24px 10px 22px 10px;
+    padding: 20px 10px 20px 10px;
+    width: 150px;
+    height: 80px;
+    text-align: center;
+}
+
+    .RealBodyLinksNav a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
+    }
+
+        .RealBodyLinksNav a:hover {
+            text-decoration: none;
+        }
+
+        .RealBodyLinksNav a, .loader-nav-namelogo a, .RealBodyLinksNav a i {
+            background-color: white;
+        }
+
+.loader-nav-namelogo {
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px 0px 10px 30px;
+    text-align: left;
+    color: black;
+    font-size: 32px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.bxhomeicon {
+    background-color: white;
+    transform: translateY(5px);
+    font-size: 30px;
+}
+
+.bxlogout {
+    font-size: 30px;
+    transform: translateY(5px);
+}
+
+.RealBodyLinksNavLogout {
+    display: inline-block;
+    margin: 20px 30px 20px 10px;
+    padding: 20px 10px 20px 10px;
+    width: 320px;
+    height: 80px;
+    text-align: center;
+    background-color: white;
+}
+
+    .RealBodyLinksNavLogout button {
+        text-decoration: none;
+        text-align: center;
+        font-size: 24px;
+        font-family: 'Montserrat Alternates', sans-serif;
+        border: 1px solid #266352;
+        width: 300px;
+        border-radius: 0 15px 0 15px;
+        color: #128061;
+        background-color: white;
+    }
+
+        .RealBodyLinksNavLogout button:hover {
+            text-decoration: none;
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Montserrat Alternates', sans-serif;
+            border: 1px solid #266352;
+            width: 300px;
+            border-radius: 15px 0 15px 0;
+            color: #b5f7e6;
+            background-color: #128061;
+        }
+
+    .RealBodyLinksNavLogout .bxlogout:hover {
+        background-color: #128061;
+    }
