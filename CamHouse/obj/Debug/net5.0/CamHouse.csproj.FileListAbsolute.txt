@@ -619,3 +619,5 @@ C:\Users\Tudorachi.16242\source\repos\CamHouse\CamHouse\bin\Debug\net5.0\runtime
 C:\Users\Tudorachi.16242\source\repos\CamHouse\CamHouse\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Tudorachi.16242\source\repos\CamHouse\CamHouse\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Tudorachi.16242\source\repos\CamHouse\CamHouse\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Tudorachi.16242\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\Tudorachi.16242\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_LogoutLayout.cshtml.g.cs
