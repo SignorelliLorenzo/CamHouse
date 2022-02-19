@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 
 namespace CamScraping
 {
@@ -17,28 +19,35 @@ namespace CamScraping
             ChromeOptions options = new ChromeOptions();
             //options.AddExtension("extension_4_41_0_0.crx");
             //options.AddArgument("load-extension" + Directory.GetCurrentDirectory() + @"\ohahllgiabjaoigichmmfljhkcfikeof");
+            options.PageLoadStrategy = PageLoadStrategy.Eager;
+            options.AddArgument("--headless");
             using (ChromeDriver driver = new ChromeDriver(options))
             {
-                driver.Manage().Timeouts().PageLoad = TimeSpan.FromMilliseconds(10000);
+                driver.Manage().Timeouts().PageLoad = TimeSpan.FromMilliseconds(5000);
                 try
                 {
                     driver.Url = $"http://www.insecam.org";
                 }
                 catch
                 {
-                    return;
                 }
                 int numeroCam = 5;
+                int id = 0;
                 List<string> list = new List<string>();
-                var countries = Wait(By.Id("countriesul"), driver, 10000).FindElements(By.TagName("li"));
-                foreach (var country in countries)
+                using (var conn = new SQLiteConnection("Data Source=Telecamere.db"))
                 {
-                     list.AddRange( GetCams(country.FindElement(By.TagName("a")).GetAttribute("href"), driver,numeroCam));
-                    
-                }
-                foreach (var ip in list)
-                {
-                    Console.WriteLine(ip);
+                    conn.Open();
+                    var countries = Wait(By.Id("countriesul"), driver, 10000).FindElements(By.TagName("li"));
+                    foreach (var country in countries)
+                    {
+                        list.AddRange(GetCams(id,country.FindElement(By.TagName("a")).GetAttribute("href"), driver, numeroCam,conn));
+                        
+
+                    }
+                    foreach (var ip in list)
+                    {
+                        Console.WriteLine(ip);
+                    }
                 }
             }
 
@@ -55,20 +64,34 @@ namespace CamScraping
             
 
         }
-        public static List<string> GetCams(string link, ChromeDriver Driver,int num)
+        public static List<string> GetCams(int id,string link, ChromeDriver Driver,int num,SQLiteConnection conn)
         {
-            int x = 0;
+            id++;
             List<string> opencams = new List<string>();
-            OpenNewTab(link, Driver);
-            var z = Driver.FindElements(By.ClassName("thumbnail-item__preview"));
+            try
+            {
+                OpenNewTab(link, Driver);
+
+
+                Driver.SwitchTo().Window(Driver.WindowHandles.Last());
+
+            }
+            catch { }
+            var z = Driver.FindElements(By.ClassName("thumbnail-item"));
+            Console.WriteLine("----------------------------------------------------");
             foreach (var item in z)
             {
+
+                var name = item.FindElement(By.ClassName("thumbnail-item__caption")).Text;
+                var ext = item.FindElement(By.ClassName("thumbnail-item__preview")).FindElement(By.TagName("img")).GetAttribute("src");
+                var ip = item.FindElement(By.ClassName("thumbnail-item__preview")).FindElement(By.TagName("img")).GetAttribute("src").Replace("COUNTER","");
+                Console.WriteLine($"Name : {name}, Ip : {ip}");
                 opencams.Add(item.FindElement(By.TagName("img")).GetAttribute("src").Split('/')[2]);
-                x++;
+                id++;
             }
-            Driver.SwitchTo().Window(Driver.WindowHandles.Last());
             Driver.Close();
             Driver.SwitchTo().Window(Driver.WindowHandles.First());
+            Console.WriteLine("----------------------------------------------------");
 
             return opencams;
 
