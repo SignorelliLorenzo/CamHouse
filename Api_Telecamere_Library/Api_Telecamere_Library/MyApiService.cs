@@ -15,7 +15,7 @@ namespace Api_Telecamere_Library
 {
     public class MyApiService
     {
-        private readonly static string url = "https://localhost:44302/";
+        public static string url = "https://localhost:44302/";
         public static async Task<List<Telecamera_Data>> GetAll(string token)
         {
             HttpClient client = new HttpClient();
