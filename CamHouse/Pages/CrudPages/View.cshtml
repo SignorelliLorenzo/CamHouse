@@ -80,3 +80,26 @@
     </div>
 </div>*@
 
+<div class="row">
+    @if (Model.pageNumber == null)
+    {
+        Model.pageNumber = 1;
+    }
+    @for (int i = ((int)Model.pageNumber - 1); i < ((int)Model.pageNumber + 2); i++)
+    {
+        if (i == -1)
+        {
+
+        }
+        else {
+    <form method="get">
+        <input type="hidden" asp-for="lista">
+        <input type="hidden" asp-for="elecamere">
+        <input type="hidden" asp-for="pageNumber" value="@i">
+        <input type="submit" value="@(i+1)">
+    </form>
+        }
+    }
+    </div>>
+    
+
