@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using static Api_Telecamere_Library.Telecamera;
 
 namespace Api_Telecamere_Library.Models.DTOS.Responses
 {

@@ -7,3 +7,13 @@ C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Telecamere_Library\Api_Telecam
 C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\bin\Debug\netstandard2.0\Api_Telecamere_Library.pdb
 C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.dll
 C:\Users\ghilardi.17186\Source\Repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.pdb
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.csproj.AssemblyReference.cache
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.AssemblyInfoInputs.cache
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.AssemblyInfo.cs
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.csproj.CoreCompileInputs.cache
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.dll
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\obj\Debug\netstandard2.0\Api_Telecamere_Library.pdb
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\bin\Debug\netstandard2.0\Api_Telecamere_Library.deps.json
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\bin\Debug\netstandard2.0\Api_Telecamere_Library.dll
+C:\Users\LORY\source\repos\CamHouse\Api_Telecamere_Library\Api_Telecamere_Library\bin\Debug\netstandard2.0\Api_Telecamere_Library.pdb
