@@ -38,7 +38,7 @@ namespace CamHouse.Pages
         public IList<Telecamera_Data> lista { get; set; }
         [BindProperty]
         public int? pageNumber { get; set; }
-        public void OnGet()
+        public async Task<IActionResult> OnGet()
         {
             if (pageNumber == null)
                 pageNumber = 1;
@@ -72,8 +72,43 @@ namespace CamHouse.Pages
                 elecamere.Add(lista[(int)num + x]);
                 x++;
             }
-
+            return Page();
         }
-      
+        public async Task<IActionResult> OnPost()
+        {
+            if (pageNumber == null)
+                pageNumber = 1;
+            if (elecamere.Count == 0)
+            {
+                try
+                {
+                    lista = new List<Telecamera_Data>();
+                    lista = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+                }
+                catch
+                {
+                    for (int i = 0; i < 100; i++)
+                    {
+                        lista.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
+                    }
+
+                }
+                elecamere = new List<Telecamera_Data>();
+
+            }
+            else
+            {
+                elecamere.Clear();
+            }
+
+            int? num = pageNumber * elementnumber - elementnumber;
+            int x = 0;
+            while (x < 10)
+            {
+                elecamere.Add(lista[(int)num + x]);
+                x++;
+            }
+            return Page();
+        }
     }
 }
