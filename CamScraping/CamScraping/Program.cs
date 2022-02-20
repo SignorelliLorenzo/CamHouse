@@ -15,8 +15,8 @@ namespace CamScraping
         static void Main(string[] args)
         {
             ChromeOptions options = new ChromeOptions();
-            //options.AddExtension("extension_4_41_0_0.crx");
-            //options.AddArgument("load-extension"+Directory.GetCurrentDirectory()+@"\ohahllgiabjaoigichmmfljhkcfikeof");
+            options.AddExtension("extension_4_41_0_0.crx");
+            options.AddArgument("load-extension" + Directory.GetCurrentDirectory() + @"\ohahllgiabjaoigichmmfljhkcfikeof");
             using (ChromeDriver driver = new ChromeDriver(options))
             {
                 driver.Manage().Timeouts().PageLoad = TimeSpan.FromMilliseconds(10000);
@@ -25,7 +25,9 @@ namespace CamScraping
                     driver.Url = $"http://www.insecam.org";
                 }
                 catch
-                { }
+                {
+                    return;
+                }
                 int numeroCam = 5;
                 List<string> list = new List<string>();
                 var countries = Wait(By.Id("countriesul"), driver, 10000).FindElements(By.TagName("li"));

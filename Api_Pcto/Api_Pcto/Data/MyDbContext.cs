@@ -13,6 +13,6 @@ namespace Api_Pcto.Data
 
         }
 
-        public DbSet<Telecamera>eletelecamere { get; set; }
+        public DbSet<Telecamera_Data>eletelecamere { get; set; }
     }
 }
