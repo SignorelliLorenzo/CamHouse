@@ -44,7 +44,7 @@
 </div>
 
 
-<div class="row">
+<div class="rowcustom">
 
     @for (int i = (Model.pageNumber - 1); i < (Model.pageNumber + 2); i++)
     {
@@ -61,8 +61,7 @@
 
             if (Model.pageNumber == i)
             {
-                <form method="post">
-
+                <form class="numberpage" method="post">
                     <input type="hidden" asp-for="@Model.pageNumber" value="@(i)">
                     <input style="background-color:black; color:white" type="submit" value="@(i+1)">
                 </form>
@@ -70,13 +69,12 @@
             else
             {
 
-                <form method="post">
-
+                <form class="numberpage" method="post">
                     <input type="hidden" asp-for="@Model.pageNumber" value="@(i)">
                     <input type="submit" value="@(i+1)">
                 </form>
             }
         }
     }
-</div>>
+</div>
 

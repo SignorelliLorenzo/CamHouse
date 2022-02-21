@@ -8,87 +8,22 @@
     box-sizing: border-box;
 }
 
-/* Centrare tutto in mezzo alla pagina*/
-.Row-mid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.RealBodyLinksNavLogout button {
+    text-decoration: none;
     text-align: center;
-    height: 100vh;
-    background-color: #b5f7e6;
+    font-size: 24px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border: 1px solid #266352;
+    width: 300px;
+    border-radius: 0 15px 0 15px;
+    color: #128061;
+    background-color: white;
 }
 
-/* Titolo ForgotPassword */
-#Title-fpc {
-    text-align: center;
-    font-size: 54px;
-    padding: 5px;
-    font-weight: bold;
-    font-family: 'Space Grotesk', sans-serif;
-}
-
-/* Sottotitolo Register */
-#Subtitle-fpc {
-    text-align: center;
-    padding: 2px;
-    margin: 0 9% 0 9%;
-    width: 500px;
-}
-
-/* Setup Imagine Register*/
-#imgfpc {
-    width: 500px;
-    text-align: center;
-}
-
-/* Parte Social */
-.Social-login {
-    margin: 20px 0 0 0;
-}
-
-    .Social-login a {
-        font-size: 54px;
-        text-decoration: none;
-        color: #4f4e79;
-        padding: 10px;
-    }
-
-.bxl-twitter:hover {
-    color: #007fff;
-}
-
-.bxl-facebook:hover {
-    color: #0000ff;
-}
-
-.bxl-discord:hover {
-    color: #728cd4;
-}
-
-.bxl-instagram:hover {
-    animation: instragram-colors-hover 2s alternate infinite;
-}
-
-@keyframes instragram-colors-hover {
-    0% {
-        color: rgba(81,91,212,1);
-    }
-
-    25% {
-        color: rgba(129,52,175,1);
-    }
-
-    50% {
-        color: rgba(221,42,123,1);
-    }
-
-    75% {
-        color: rgba(254,218,119,1);
-    }
-
-    100% {
-        color: rgba(245,133,41,1);
-    }
+.Body-Privacy {
+    padding: 20px;
+    margin: 10px;
+    overflow: hidden;
 }
 
 .navbarcustom {
@@ -96,6 +31,7 @@
     padding: 0;
     height: 124px;
     background-color: white;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 
     .navbarcustom ul {

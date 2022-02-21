@@ -27,7 +27,9 @@
             <ul>
                 @if (SignInManager.IsSignedIn(User))
                 {
-
+                    @*<li class="RealBodyLinksNav">
+                <a asp-area="Identity" asp-page="/Account/Register">Account</a>
+            </li>*@
                     <li style="float: left;" class="loader-nav-namelogo">
                         <a>Cam<br>House</a>
                     </li>
@@ -37,10 +39,13 @@
                         </form>
                     </li>
                     <li class="RealBodyLinksNav">
+                        <a asp-area="" asp-page="/CrudPages/Privacy">Privacy</a>
+                    </li>
+                    <li class="RealBodyLinksNav">
                         <a asp-area="" asp-page="/CrudPages/View">View</a>
                     </li>
                     <li class="RealBodyLinksNav">
-                        <a asp-area="" asp-page="/Index"><i class='bx bx-home-alt bxhomeicon'></i>Home</a>
+                        <a asp-area="" asp-page="/Index"><i class='bx bx-home-alt'></i>Home</a>
                     </li>
                 }
                 else
@@ -50,9 +55,6 @@
                     </li>
                     <li class="RealBodyLinksNav">
                         <a asp-area="Identity" asp-page="/Account/Login">Account</a>
-                    </li>
-                    <li class="RealBodyLinksNav">
-                        <a asp-area="" asp-page="/Index"><i class='bx bx-home-alt bxhomeicon'></i>Home</a>
                     </li>
                 }
             </ul>

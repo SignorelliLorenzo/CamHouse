@@ -225,6 +225,31 @@
     font-size: 30px;
     transform: translateY(3px);
 }
+
+.rowcustom{
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 700px;
+}
+
+.numberpage{
+    color: black;
+    float: left;
+    text-decoration: none;
+}
+
+    .numberpage a.active {
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .numberpage a:hover:not(.active) {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 480px) {
 }
