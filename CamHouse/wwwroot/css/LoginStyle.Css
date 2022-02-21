@@ -5,7 +5,6 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #b5f7e6;
     box-sizing: border-box;
 }
 
@@ -23,6 +22,7 @@
     padding: 10px;
     border: 2px solid #53c0a2;
     border-radius: 5px;
+    background-color: #b5f7e6;
 }
 
     #psw-check::placeholder, #e-check::placeholder {
@@ -40,6 +40,7 @@
     outline: #53c0a2 1px;
     border: 2px solid #53c0a2;
     border-radius: 5px;
+    background-color: #b5f7e6;
 }
 
 #SubmitLogin {
@@ -54,6 +55,7 @@
     outline: #53c0a2 2px;
     border: 2px solid #128061;
     border-radius: 5px;
+    background-color: #b5f7e6;
 }
 
 /* Input Passa al Login */
@@ -166,6 +168,7 @@
     align-items: center;
     text-align: center;
     min-height: 90vh;
+    background-color: #b5f7e6;
 }
 
 .Social-login {

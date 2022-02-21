@@ -70,14 +70,14 @@ namespace CamHouse.Pages.CrudPages
             return Page();
         }
 
-        public void OnGet(string SearchString)
-        {
-            if (!String.IsNullOrWhiteSpace(SearchString))
-            {
-                var stringresult = _context.CameraAppDb.Where(m => m.nome.Contains(SearchString));
-                EleView = stringresult.ToList();
-            }
-        }
+        //public void OnGet(string SearchString)
+        //{
+        //    if (!String.IsNullOrWhiteSpace(SearchString))
+        //    {
+        //        var stringresult = _context.CameraAppDb.Where(m => m.nome.Contains(SearchString));
+        //        EleView = stringresult.ToList();
+        //    }
+        //}
 
         public async Task<IActionResult> OnPost()
         {
