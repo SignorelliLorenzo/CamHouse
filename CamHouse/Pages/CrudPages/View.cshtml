@@ -9,12 +9,12 @@
     <div class="row">
         <div class="nav-mid">
             <form class="SBForm" method="get">
-                <input type="text" placeholder="Cerca..." class="searchbox" />
+                <input type="text" placeholder="Cerca..." class="searchbox" name="SearchString" />
                 <input type="submit" class="cerca" value="Cerca">
             </form>
             <form class="FForm" method="get">
                 <i class='bx bxs-star'></i>
-                <input type="submit" class="perferiti-text" value="Preferiti">
+                <input type="submit" name="pref" class="perferiti-text" value="Preferiti">
             </form>
             <form class="STTForm" method="get">
                 <i class='bx bxs-user-voice'></i>
@@ -23,7 +23,6 @@
         </div>
         <div class="colcustom">
 
-
             @foreach (var element in Model.EleView)
             {
                 <div class="cardcustom">
@@ -31,11 +30,11 @@
                         <img src="https://localhost:5001/api/url=http:%2F%2F202.245.13.81:80%2Fcgi-bin%2Fcamera%3Fresolution=640&amp;quality=1&amp;Language=0&amp;1645207194" alt="card-video">
                     </div>
                     <div class="cardcustom-text">
-                        <span class="text">| Name » Test</span>
-                        <span class="text">| Numero Like » 12</span>
-                        <span class="text">| Numero Salvati » 34</span>
+                        <span class="text">| Name » @element.nome</span>
+                        <span class="text">| Numero Like » @element.num_like</span>
+                        <span class="text">| Numero Salvati » @element.num_salvati</span>
                         <hr />
-                        <a class="BtnGo" asp-page="./CamJoinView">Show me</a>
+                        <a class="BtnGo" asp-page="./CamJoinView" asp-route-id="@element.id">Show me</a>
                     </div>
                 </div>
             }

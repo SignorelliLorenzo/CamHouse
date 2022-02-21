@@ -361,7 +361,6 @@ C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layou
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_LoginLayout.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_RegisterLayout.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ViewLayout.cshtml.g.cs
-C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPartial.cshtml.g.cs
@@ -894,3 +893,4 @@ C:\Users\garlini.17185\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pag
 C:\Users\garlini.17185\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_PrivacyLayout.cshtml.g.cs
 C:\Users\garlini.17185\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ResendEmailLayout.cshtml.g.cs
 C:\Users\garlini.17185\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\CrudPages\Privacy.cshtml.g.cs
+C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\CrudPages\Privacy.cshtml.g.cs

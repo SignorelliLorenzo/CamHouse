@@ -69,6 +69,16 @@ namespace CamHouse.Pages.CrudPages
             EleView = GetPageView(CompleteList, pageNumber, elementnumber);
             return Page();
         }
+
+        public void OnGet(string SearchString)
+        {
+            if (!String.IsNullOrWhiteSpace(SearchString))
+            {
+                var stringresult = _context.CameraAppDb.Where(m => m.nome.Contains(SearchString));
+                EleView = stringresult.ToList();
+            }
+        }
+
         public async Task<IActionResult> OnPost()
         {
             try

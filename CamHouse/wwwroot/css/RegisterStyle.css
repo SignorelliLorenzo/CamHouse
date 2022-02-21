@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #b5f7e6;
 }
 
 /* Centrare tutto in mezzo alla pagina*/
@@ -13,8 +14,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    background-color: #b5f7e6;
+    min-height: 90vh;
 }
 
 
@@ -323,6 +323,29 @@
 }
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 480px) {
+    .row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+
+    .col-img, .col-form {
+        transform: scale(0.8);
+        text-align: center;
+    }
+
+    #imgregister {
+        width: 400px;
+        text-align: center;
+    }
+
+    #Subtitle-login, #Psw_forgot_text, #Resend_Verify_Text, .LoginRegister {
+        margin: 5px 0 5px 0;
+    }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
