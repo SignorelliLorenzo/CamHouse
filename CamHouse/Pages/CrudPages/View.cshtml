@@ -2,65 +2,36 @@
 @model ViewModel
 @{
     Layout = "~/Pages/Layout/_ViewLayout.cshtml";
-    ViewData["Title"] = "Home page";
 }
-
-@*<table class="table table-striped table-dark">
-
-        <tr>
-            <th>Nome</th>
-            <th>Link</th>
-            <th>Numero Like</th>
-            <th>Numero Salvati</th>
-        </tr>
-
-
-
-        <tbody>
-            @foreach (var item in Model.elecamere)
-            {
-                <tr>
-                    <td>@item.nome</td>
-                    <td>@item.link</td>
-                    <td>@item.num_like</td>
-                    <td>@item.num_salvati</td>
-
-
-                    <td>
-                        <b><a style="color:darkorange" asp-page="./Edit" asp-route-id="@item.id">Edit</a></b>
-
-                    </td>
-
-                </tr>
-            }
-        </tbody>
-
-    </table>*@
-
 <div class="Body-view">
     <div class="row">
-        <div class="col-md-7">
-
-                <div class="cardcustom">
-                    <div class="cardcustom-image">
-                        <img src="https://localhost:5001/api/url=http:%2F%2F202.245.13.81:80%2Fcgi-bin%2Fcamera%3Fresolution=640&amp;quality=1&amp;Language=0&amp;1645207194" alt="card-video">
-                    </div>
-                    <div class="cardcustom-text">
-                        <span class="text">| Name » Test</span>
-                        <span class="text">| Numero Like » 12</span>
-                        <span class="text">| Numero Salvati » 34</span>
-                        <hr />
-                        <a class="BtnGo" href="/CrudPages/CamJoinView">Show me</a>
-                    </div>
+            <div class="nav-mid">
+                <form class="SBForm" method="get">
+                    <input type="text" placeholder="Cerca..." class="searchbox" />
+                    <input type="submit" class="cerca" value="Cerca">
+                </form>
+                <form class="FForm" method="get">
+                    <i class='bx bxs-star'></i>
+                    <input type="submit" class="perferiti-text" value="Preferiti">
+                </form>
+                <form class="STTForm" method="get">
+                    <i class='bx bxs-user-voice'></i>
+                    <input type="submit" class="speak-text" value="Speak">
+                </form>
+            </div>
+        <div class="colcustom">
+            <div class="cardcustom">
+                <div class="cardcustom-image">
+                    <img src="https://localhost:5001/api/url=http:%2F%2F202.245.13.81:80%2Fcgi-bin%2Fcamera%3Fresolution=640&amp;quality=1&amp;Language=0&amp;1645207194" alt="card-video">
                 </div>
-            
-        </div>
-    </div>
-</div>
-
-@*<div class="Body-View">
-    <div class="row">
-        <div class="col-md-7" style="background-color: black;">
+                <div class="cardcustom-text">
+                    <span class="text">| Name » Test</span>
+                    <span class="text">| Numero Like » 12</span>
+                    <span class="text">| Numero Salvati » 34</span>
+                    <hr />
+                    <a class="BtnGo" asp-page="./CamJoinView">Show me</a>
+                </div>
+            </div>
             @foreach (var item in Model.elecamere)
             {
                 <div class="cardcustom">
@@ -71,12 +42,11 @@
                         <span class="text">| Name » @item.nome</span>
                         <span class="text">| Numero Like » @item.num_like</span>
                         <span class="text">| Numero Salvati » @item.num_salvati</span>
-                        <hr />
-                        <a href="@item.link">Show me</a>
+                        <a class="BtnGo" asp-page="./CamJoinView" asp-route-id="@item.nome">Show me</a>
                     </div>
                 </div>
             }
         </div>
     </div>
-</div>*@
+</div>
 

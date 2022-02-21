@@ -55,12 +55,14 @@
 }
 
 .Body-view {
-    width: 98vw;
-    height: 80vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
+}
+
+.colcustom{
+    display: contents;
+    padding: 20px;
+    margin: 20px;
 }
 
 .cardcustom {
@@ -74,6 +76,7 @@
     background: white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
     text-align: center;
+    margin: 17px;
 }
 
 .cardcustom-image {
@@ -177,6 +180,50 @@
 
 .LOForm {
     background-color: white;
+}
+
+.nav-mid{
+    text-align: center;
+    display: inline-block;
+    width: 1400px;
+    padding: 20px;
+    margin: 20px 0 20px 0;
+    background-color: #b5f7e6;
+}
+
+.SBForm, .FForm, .STTForm{
+    display: inline;
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.searchbox {
+    background-color: white;
+    color: #266352;
+    border: 1px solid #266352;
+    border-radius: 10px 0 0 10px;
+    font-size: 24px;
+    outline: #266352 2px;
+    padding: 5px;
+}
+
+.perferiti-text, .speak-text, .cerca {
+    font-size: 24px;
+    width: 200px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid #266352;
+    border-radius: 15px;
+}
+
+.cerca{
+    border-radius: 0 10px 10px 0;
+}
+
+.bxs-star, .bxs-user-voice{
+    font-size: 30px;
+    transform: translateY(3px);
 }
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 480px) {

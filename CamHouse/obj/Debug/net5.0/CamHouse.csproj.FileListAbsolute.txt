@@ -655,3 +655,4 @@ C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Ident
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ResendEmailLayout.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ForgotPasswordConfirmLayout.cshtml.g.cs
+C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_PrivacyLayout.cshtml.g.cs
