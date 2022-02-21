@@ -1,100 +1,82 @@
 ﻿@page
 @using Api_Telecamere_Library
-@model ViewModel
+@model CamHouse.Pages.CrudPages.ViewModel
 @{
     Layout = "~/Pages/Layout/_ViewLayout.cshtml";
 }
 
 <div class="Body-view">
     <div class="row">
-            <div class="nav-mid">
-                <form class="SBForm" method="get">
-                    <input type="text" placeholder="Cerca..." class="searchbox" />
-                    <input type="submit" class="cerca" value="Cerca">
-                </form>
-                <form class="FForm" method="get">
-                    <i class='bx bxs-star'></i>
-                    <input type="submit" class="perferiti-text" value="Preferiti">
-                </form>
-                <form class="STTForm" method="get">
-                    <i class='bx bxs-user-voice'></i>
-                    <input type="submit" class="speak-text" value="Speak">
-                </form>
-            </div>
+        <div class="nav-mid">
+            <form class="SBForm" method="get">
+                <input type="text" placeholder="Cerca..." class="searchbox" />
+                <input type="submit" class="cerca" value="Cerca">
+            </form>
+            <form class="FForm" method="get">
+                <i class='bx bxs-star'></i>
+                <input type="submit" class="perferiti-text" value="Preferiti">
+            </form>
+            <form class="STTForm" method="get">
+                <i class='bx bxs-user-voice'></i>
+                <input type="submit" class="speak-text" value="Speak">
+            </form>
+        </div>
         <div class="colcustom">
-            
-            
-@foreach (var element in Model.EleView )
-{
-<div class="cardcustom">
-                <div class="cardcustom-image">
-                    <img src="https://localhost:5001/api/url=http:%2F%2F202.245.13.81:80%2Fcgi-bin%2Fcamera%3Fresolution=640&amp;quality=1&amp;Language=0&amp;1645207194" alt="card-video">
-                </div>
-                <div class="cardcustom-text">
-                    <span class="text">| Name » Test</span>
-                    <span class="text">| Numero Like » 12</span>
-                    <span class="text">| Numero Salvati » 34</span>
-                    <hr />
-                    <a class="BtnGo" asp-page="./CamJoinView">Show me</a>
-                </div>
-            </div>
-    
-}
-            </div>
-        </div>
-        </div>
 
 
-<div class="row"> 
-
-    @for (int i = (Model.pageNumber - 1); i < (Model.pageNumber + 2)  ; i++)
-    {
-        if (i == -1)
-        {
-
-        }
-        else if(((Model.pageNumber+1)*Model.elementnumber)>=Model.CompleteList.Count && Model.pageNumber<i)
-        {
-            
-        }
-        else
-        {
-            
-            if (Model.pageNumber == i)
+            @foreach (var element in Model.EleView)
             {
-                <form method="post">
-                 
-                    <input type="hidden" asp-for="@Model.pageNumber" value="@(i)">
-                    <input style="background-color:black; color:white" type="submit" value="@(i+1)">
-                </form>
-            }
-            else
-
-            @foreach (var item in Model.elecamere)
-            {
-                <form method="post">
-             
-                    <input type="hidden" asp-for="@Model.pageNumber" value="@(i)">
-                    <input type="submit" value="@(i+1)">
-                </form>
-            }
-        }
-    }
-</div>
-
                 <div class="cardcustom">
                     <div class="cardcustom-image">
-                        <img src="~/Img/forgotpassword.png" alt="card-video">
+                        <img src="https://localhost:5001/api/url=http:%2F%2F202.245.13.81:80%2Fcgi-bin%2Fcamera%3Fresolution=640&amp;quality=1&amp;Language=0&amp;1645207194" alt="card-video">
                     </div>
                     <div class="cardcustom-text">
-                        <span class="text">| Name » @item.nome</span>
-                        <span class="text">| Numero Like » @item.num_like</span>
-                        <span class="text">| Numero Salvati » @item.num_salvati</span>
-                        <a class="BtnGo" asp-page="./CamJoinView" asp-route-id="@item.nome">Show me</a>
+                        <span class="text">| Name » Test</span>
+                        <span class="text">| Numero Like » 12</span>
+                        <span class="text">| Numero Salvati » 34</span>
+                        <hr />
+                        <a class="BtnGo" asp-page="./CamJoinView">Show me</a>
                     </div>
                 </div>
             }
         </div>
     </div>
 </div>
+
+
+<div class="row">
+
+    @for (int i = (Model.pageNumber - 1); i < (Model.pageNumber + 2); i++)
+    {
+        if (i == -1)
+        {
+
+        }
+        else if (((Model.pageNumber + 1) * Model.elementnumber) >= Model.CompleteList.Count && Model.pageNumber < i)
+        {
+
+        }
+        else
+        {
+
+            if (Model.pageNumber == i)
+            {
+                <form method="post">
+
+                    <input type="hidden" asp-for="@Model.pageNumber" value="@(i)">
+                    <input style="background-color:black; color:white" type="submit" value="@(i+1)">
+                </form>
+            }
+            else
+            {
+
+                <form method="post">
+
+                    <input type="hidden" asp-for="@Model.pageNumber" value="@(i)">
+                    <input type="submit" value="@(i+1)">
+                </form>
+            }
+        }
+    }
+</div>>
 

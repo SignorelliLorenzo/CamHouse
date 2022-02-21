@@ -1,5 +1,4 @@
 ﻿using CamHouse.Data;
-
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,7 +11,7 @@ using Api_Telecamere_Library;
 using Api_Telecamere_Library.Models;
 using Microsoft.Extensions.Configuration;
 
-namespace CamHouse.Pages
+namespace CamHouse.Pages.CrudPages
 {
 
     [Authorize]
