@@ -1,0 +1,12 @@
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\bin\Release\net5.0\Api_Telecamere_Library.deps.json
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\bin\Release\net5.0\Api_Telecamere_Library.dll
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\bin\Release\net5.0\ref\Api_Telecamere_Library.dll
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\bin\Release\net5.0\Api_Telecamere_Library.pdb
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\Api_Telecamere_Library.csproj.AssemblyReference.cache
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\Api_Telecamere_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\Api_Telecamere_Library.AssemblyInfoInputs.cache
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\Api_Telecamere_Library.AssemblyInfo.cs
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\Api_Telecamere_Library.csproj.CoreCompileInputs.cache
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\Api_Telecamere_Library.dll
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\ref\Api_Telecamere_Library.dll
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net5.0\Api_Telecamere_Library.pdb
