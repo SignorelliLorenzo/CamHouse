@@ -1,0 +1,5 @@
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net48\Api_Telecamere_Library.csproj.AssemblyReference.cache
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net48\Api_Telecamere_Library.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net48\Api_Telecamere_Library.AssemblyInfoInputs.cache
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net48\Api_Telecamere_Library.AssemblyInfo.cs
+C:\Users\canej\source\repos\CamHouse_Git\Api_Telecamere_Library\Api_Telecamere_Library\obj\Release\net48\Api_Telecamere_Library.csproj.CoreCompileInputs.cache
