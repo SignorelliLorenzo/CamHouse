@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using System.ComponentModel.DataAnnotations;
 
 namespace CamScraping
 {
@@ -16,6 +17,22 @@ namespace CamScraping
     {
         static void Main(string[] args)
         {
+            bool done = false;
+            MyApiService.url = "https://localhost:5001/";
+            if (!done)
+            {
+                var response = MyApiService.RegisterAsync(new RegistrationRequest() { Email = "admin.admin@gmail.it", Password = "Gennaro" }, "").Result;
+                if(response.Success)
+                {
+                    Console.WriteLine(response.Token);
+                    Console.ReadKey();
+                    return;
+                }
+                Console.WriteLine(response.Errors[0]);
+                Console.ReadKey();
+                return;
+            }
+            
             ChromeOptions options = new ChromeOptions();
             //options.AddExtension("extension_4_41_0_0.crx");
             //options.AddArgument("load-extension" + Directory.GetCurrentDirectory() + @"\ohahllgiabjaoigichmmfljhkcfikeof");
@@ -66,6 +83,8 @@ namespace CamScraping
         }
         public static List<string> GetCams(int id,string link, ChromeDriver Driver,int num,SQLiteConnection conn)
         {
+            
+            
             id++;
             List<string> opencams = new List<string>();
             try

@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {}
+    "C:\\Users\\LORY\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
+    "C:\\Users\\LORY\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+        "projectUniqueName": "C:\\Users\\LORY\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
         "projectName": "Api_Pcto",
-        "projectPath": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
-        "packagesPath": "C:\\Users\\canej\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\obj\\",
+        "projectPath": "C:\\Users\\LORY\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+        "packagesPath": "C:\\Users\\LORY\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LORY\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\canej\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\LORY\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -97,6 +104,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
