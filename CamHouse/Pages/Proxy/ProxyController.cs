@@ -24,25 +24,35 @@ namespace CamHouse.Pages.Proxy
             Byte[] bytes=null;
             try
             {
-                url = url.Replace("%2F","/").Replace("%3F","?");
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    using (BinaryReader reader = new BinaryReader(httpResponse.GetResponseStream()))
-                    {
-                         bytes = reader.ReadBytes(1 * 1024 * 1024 * 10);
-                       
-                    }
-                }
+                url = url.Replace("%2F", "/").Replace("%3F", "?");
+                WebClient client = new WebClient();
                 
+                Stream stream = client.OpenRead(url);
+                MemoryStream ms = new MemoryStream();
+                stream.CopyTo(ms);
+                stream.Flush();
+                stream.Close();
+                bytes = ms.ToArray();
+                ;
+                
+                //var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+                //var httpResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
+                //using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                //{
+                //    using (BinaryReader reader = new BinaryReader(httpResponse.GetResponseStream()))
+                //    {
+                //         bytes = reader.ReadBytes(1 * 1024 * 1024 * 10);
+
+                //    }
+                //}
+
             }
             catch (Exception ex)
             {
                 Response.StatusCode = 500;
             }
 
-            return File(bytes, "image/jpg");
+            return File(bytes, "image/jpeg");
 
         }
         [HttpGet]
