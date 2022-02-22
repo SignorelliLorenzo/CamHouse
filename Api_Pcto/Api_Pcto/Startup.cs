@@ -67,7 +67,7 @@ namespace Api_Pcto
                         ValidateIssuer = false,
                         ValidateAudience = false,
                         //Controlla la scadenza
-                        ValidateLifetime = true,
+                        ValidateLifetime = false,
                         //
                         RequireExpirationTime = false
                         
