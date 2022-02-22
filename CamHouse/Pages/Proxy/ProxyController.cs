@@ -33,7 +33,7 @@ namespace CamHouse.Pages.Proxy
                 stream.Flush();
                 stream.Close();
                 bytes = ms.ToArray();
-                ;
+                
                 
                 //var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
                 //var httpResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
