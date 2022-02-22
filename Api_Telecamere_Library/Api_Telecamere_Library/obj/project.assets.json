@@ -3492,23 +3492,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ghilardi.17186\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\canej\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
+      "projectUniqueName": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
       "projectName": "Api_Telecamere_Library",
-      "projectPath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
-      "packagesPath": "C:\\Users\\ghilardi.17186\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\obj\\",
+      "projectPath": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
+      "packagesPath": "C:\\Users\\canej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Telecamere_Library\\Api_Telecamere_Library\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ghilardi.17186\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\canej\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3559,7 +3555,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
