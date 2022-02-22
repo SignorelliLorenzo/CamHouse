@@ -10,28 +10,20 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using System.ComponentModel.DataAnnotations;
+using Api_Telecamere_Library;
+using Api_Telecamere_Library.Models.DTOS.Requests;
 
 namespace CamScraping
 {
     class Program
     {
+        public static string token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYjJiZWI4LTU1MjktNDcyYS05MTc3LWFkYjg5MjA3ZTAxZiIsImVtYWlsIjoidXNlckBleGFtcGxlLmNvbSIsInN1YiI6InVzZXJAZXhhbXBsZS5jb20iLCJqdGkiOiIyZWE1MzIxYS0xZWJhLTQyNjYtOTA0OC1hYjJlNWM5MWEyMTciLCJuYmYiOjE2NDU0NTA3NDYsImV4cCI6MTY0NTQ1NDM0NiwiaWF0IjoxNjQ1NDUwNzQ2fQ.AwbMlRAN8A6lhQDHCbXqZ5i4RPbOOoPzAyYGAHj-tzY";
         static void Main(string[] args)
         {
+           
             bool done = false;
-            MyApiService.url = "https://localhost:5001/";
-            if (!done)
-            {
-                var response = MyApiService.RegisterAsync(new RegistrationRequest() { Email = "admin.admin@gmail.it", Password = "Gennaro" }, "").Result;
-                if(response.Success)
-                {
-                    Console.WriteLine(response.Token);
-                    Console.ReadKey();
-                    return;
-                }
-                Console.WriteLine(response.Errors[0]);
-                Console.ReadKey();
-                return;
-            }
+            MyApiService.url = "https://localhost:44302/";
+            
             
             ChromeOptions options = new ChromeOptions();
             //options.AddExtension("extension_4_41_0_0.crx");
@@ -100,11 +92,19 @@ namespace CamScraping
             Console.WriteLine("----------------------------------------------------");
             foreach (var item in z)
             {
-
-                var name = item.FindElement(By.ClassName("thumbnail-item__caption")).Text;
-                var ext = item.FindElement(By.ClassName("thumbnail-item__preview")).FindElement(By.TagName("img")).GetAttribute("src");
-                var ip = item.FindElement(By.ClassName("thumbnail-item__preview")).FindElement(By.TagName("img")).GetAttribute("src").Replace("COUNTER","");
-                Console.WriteLine($"Name : {name}, Ip : {ip}");
+                var NewTelecameraModel = new CreaTelecameraRequest();
+                NewTelecameraModel.nome = item.FindElement(By.ClassName("thumbnail-item__caption")).Text;
+                NewTelecameraModel.link = item.FindElement(By.ClassName("thumbnail-item__preview")).FindElement(By.TagName("img")).GetAttribute("src").Replace("COUNTER","");
+                NewTelecameraModel.num_like = 0; NewTelecameraModel.num_salvati = 0;
+                Console.WriteLine($"Name : {NewTelecameraModel.nome}, Ip : {NewTelecameraModel.link}");
+                var response= MyApiService.PostAsync(NewTelecameraModel, token).Result;
+                if(!response.Success)
+                {
+                    Console.WriteLine(response.Errors[0]);
+                    Console.ReadKey();
+                    
+                }
+               
                 opencams.Add(item.FindElement(By.TagName("img")).GetAttribute("src").Split('/')[2]);
                 id++;
             }

@@ -45,6 +45,9 @@
     <Reference Include="Microsoft.Data.Sqlite, Version=6.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.Sqlite.Core.6.0.2\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SQLitePCLRaw.core, Version=2.0.6.1341, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLitePCLRaw.core.2.0.6\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
     </Reference>
@@ -85,6 +88,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiService\Config\AuthResult.cs" />
+    <Compile Include="ApiService\Models\DTOS\Requests\CreaTelecameraRequest.cs" />
+    <Compile Include="ApiService\Models\DTOS\Requests\DeleteRequest.cs" />
+    <Compile Include="ApiService\Models\DTOS\Requests\LoginRequest.cs" />
+    <Compile Include="ApiService\Models\DTOS\Requests\ModificaTelecameraRequest.cs" />
+    <Compile Include="ApiService\Models\DTOS\Requests\RegistrationRequest.cs" />
+    <Compile Include="ApiService\Models\DTOS\Requests\UserTokenRequest.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\CreaTelecameraResponse.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\EliminaTelecameraResponse.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\GetTelecameraPerIdResponse.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\GetTelecameraPerNomeResponse.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\GetTelecameraRandomResponse.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\ModificaTelecameraResponse.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\UserRegistrationResponse.cs" />
+    <Compile Include="ApiService\Models\DTOS\Responses\UserTokenResponse.cs" />
+    <Compile Include="ApiService\Models\Telecamera.cs" />
+    <Compile Include="ApiService\MyApiService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Telecamera.cs" />

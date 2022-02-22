@@ -85,3 +85,5 @@ C:\Users\LORY\source\repos\CamHouse\CamScraping\CamScraping\obj\Debug\CamScrapin
 C:\Users\LORY\source\repos\CamHouse\CamScraping\CamScraping\obj\Debug\CamScraping.pdb
 C:\Users\LORY\source\repos\CamHouse\CamScraping\CamScraping\bin\Debug\Api_Telecamere_Library.dll
 C:\Users\LORY\source\repos\CamHouse\CamScraping\CamScraping\bin\Debug\Newtonsoft.Json.dll
+C:\Users\canej\Source\Repos\CamHouse_Git\CamScraping\CamScraping\bin\Debug\Newtonsoft.Json.dll
+C:\Users\canej\Source\Repos\CamHouse_Git\CamScraping\CamScraping\bin\Debug\Newtonsoft.Json.xml
