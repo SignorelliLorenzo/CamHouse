@@ -48,7 +48,7 @@ namespace CamHouse.Pages.CrudPages
                     {
                     Success = true, Found_telecamera = new Telecamera_Data()
                         {
-                            id = (int)id, link = "http://111.169.134.192:60001/cgi-bin/snapshot.cgi?chn=0&u=admin&p=&q=0&", nome = "Telecamera1", data_creazione = default, num_like = 0, num_salvati = 0
+                            id = (int)id, link = "http://79.26.47.176:60001/cgi-bin/snapshot.cgi?chn=0&u=admin&p=&q=0&", nome = "Telecamera1", data_creazione = default, num_like = 0, num_salvati = 0
                         }
                     };
                

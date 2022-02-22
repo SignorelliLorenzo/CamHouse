@@ -7800,19 +7800,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elena\\.nuget\\packages\\": {}
+    "C:\\Users\\Gabry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
+      "projectUniqueName": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\CamHouse\\CamHouse.csproj",
       "projectName": "CamHouse",
-      "projectPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
-      "packagesPath": "C:\\Users\\elena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\obj\\",
+      "projectPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\CamHouse\\CamHouse.csproj",
+      "packagesPath": "C:\\Users\\Gabry\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\CamHouse\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7887,6 +7887,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.13, 5.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7895,7 +7901,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

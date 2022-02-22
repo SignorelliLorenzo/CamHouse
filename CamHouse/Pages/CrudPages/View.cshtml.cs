@@ -36,7 +36,7 @@ namespace CamHouse.Pages.CrudPages
         [BindProperty]
         public int pageNumber { get; set; }
         private List<Telecamera_Data> GetPageView(List<Telecamera_Data> CompleteList, int Page, int ItemsPerPage)
-        {
+        {         
             List<Telecamera_Data>  View = new List<Telecamera_Data>();
             int? num = (Page + 1) * ItemsPerPage - ItemsPerPage;
             int x = 0;
@@ -52,9 +52,9 @@ namespace CamHouse.Pages.CrudPages
         {
                 try
                 {
-                CompleteList = new List<Telecamera_Data>();
+                    CompleteList = new List<Telecamera_Data>();
 
-               CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+                    CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
                 }
                 catch
                 {
@@ -70,33 +70,55 @@ namespace CamHouse.Pages.CrudPages
             return Page();
         }
 
-        //public void OnGet(string SearchString)
-        //{
-        //    if (!String.IsNullOrWhiteSpace(SearchString))
-        //    {
-        //        var stringresult = _context.CameraAppDb.Where(m => m.nome.Contains(SearchString));
-        //        EleView = stringresult.ToList();
-        //    }
-        //}
-
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPost(string SearchString)
         {
-            try
-            {
-                CompleteList = new List<Telecamera_Data>();
 
-                CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
-            }
-            catch
+            if (String.IsNullOrEmpty(SearchString))
             {
-                //Just for testing
-                for (int i = 0; i < 25; i++)
+                try
                 {
-                    CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
+                    CompleteList = new List<Telecamera_Data>();
+
+                    CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+                }
+                catch
+                {
+                    //Just for testing
+                    for (int i = 0; i < 25; i++)
+                    {
+                        CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
+                    }
+
+                }           
+            }
+            else
+            {
+
+                try
+                {
+
+                    var result = MyApiService.GetByNameAsync(SearchString,Configuration.GetSection("token").Value).Result;
+                    if(result.Success)
+                    {
+                        CompleteList = result.Found_telecameras;
+                    }
+                    else
+                    {
+                        CompleteList = new List<Telecamera_Data>();
+                    }
+
+                }
+                catch
+                {
+                    //Just for testing
+                    for (int i = 0; i < 5; i++)
+                    {
+                        CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
+                    }
+
                 }
 
             }
-
             EleView = GetPageView(CompleteList, pageNumber, elementnumber);
             return Page();
         }
