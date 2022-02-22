@@ -62,7 +62,7 @@ namespace CamHouse.Pages.CrudPages
                 if (risposta.Success)
                 {
                     telecamera = risposta.Found_telecamera;
-                    telecamera.link = telecamera.link.Replace("?","%3F").Replace("/","%2F");
+                    telecamera.link = telecamera.link.Replace("?", "%3F").Replace("/","%2F");
                     link = risposta.Found_telecamera.link;
                     return Page();
                 }
