@@ -8,20 +8,18 @@
     <!-- Body Login -->
     <div class="row Row-mid">
         <div class="colcustom10">
-
             <div class="Zone-img">
                 <div class="Zone-img-view">
-                        <img id="video" src="https://localhost:5001/api/url=@Model.link" alt="Camera Show"  onerror="ErrorImage()"/>
+                        <img id="video" src="https://localhost:5001/api/url=@Model.link" onerror="ErrorImage()"/>
                 </div>
                      <div class="Zone-img-stats">
                         <p class="Zone-img-stats-title"></p>
                         <form class="form-like" method="post">
-                            <button type="submit" name="Like" class="Zone-img-stats-like"><i class='bx bx-like'></i> Like</button>
+                            <button type="submit" name="Like" class="Zone-img-stats-like"><em class='bx bx-like'></em> Like</button>
                             <input type="hidden" value="@Model.link"/>
                         </form>
-
                         <form class="form-pref" method="post">
-                            <button type="submit" name="Favorite"class="Zone-img-stats-pref"><i class='bx bx-bookmarks'></i> Preferiti</button>
+                            <button type="submit" name="Favorite"class="Zone-img-stats-pref"><em class='bx bx-bookmarks'></em> Preferiti</button>
                             <input type="hidden" value="@Model.link"/>
                         </form>
                     </div>
@@ -33,7 +31,7 @@
 <script>
     function ErrorImage(){
         var img = document.getElementById('video');
-        img.src = "/Img/external.png";
+        img.src = "/Img/errorcam.png";
         img.id = "onerror";
         img.onerror = null;
 

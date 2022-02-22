@@ -103,8 +103,8 @@ namespace CamHouse.Pages.CrudPages
                 }
                 catch
                 {
-                    return RedirectToPage("/Error");
 
+                    return RedirectToPage("/Error");
 
                 }
 

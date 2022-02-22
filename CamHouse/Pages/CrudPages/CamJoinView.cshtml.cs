@@ -48,7 +48,7 @@ namespace CamHouse.Pages.CrudPages
                     
                     risposta = new GetTelecameraPerIdResponse();
                     risposta = MyApiService.GetByIdAsync((int)id, Configuration.GetSection("token").Value).Result;
-                    link = risposta.Found_telecamera.link;
+
                     like = risposta.Found_telecamera.num_like;
                     favorite = risposta.Found_telecamera.num_salvati;
 
@@ -63,6 +63,7 @@ namespace CamHouse.Pages.CrudPages
                 {
                     telecamera = risposta.Found_telecamera;
                     telecamera.link = telecamera.link.Replace("?","%3F").Replace("/","%2F");
+                    link = risposta.Found_telecamera.link;
                     return Page();
                 }
                 else

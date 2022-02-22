@@ -48,7 +48,7 @@ namespace CamHouse.Pages.Proxy
             catch (Exception ex)
             {
 
-                return File(System.IO.File.ReadAllBytes("~/Img/external.png"), "image/png");
+                return File(System.IO.File.ReadAllBytes("~/Img/errorcam.png"), "image/png");
 
             }
 
