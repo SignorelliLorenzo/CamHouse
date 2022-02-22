@@ -50,25 +50,22 @@ namespace CamHouse.Pages.CrudPages
         }
         public async Task<IActionResult> OnGet()
         {
-                try
-                {
-                    CompleteList = new List<Telecamera_Data>();
+            MyApiService.url = "https://localhost:44302/";
+            try
+            {
+                CompleteList = new List<Telecamera_Data>();
 
-                    CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
-                }
-                catch
-                {
-                    //Just for testing
-                    for (int i = 0; i < 25; i++)
-                    {
-                    CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
-                    }
-
-                }
+                CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+            }
+            catch (Exception ex)
+            {
+                return RedirectToPage("/Error");
+            }
 
             EleView = GetPageView(CompleteList, pageNumber, elementnumber);
             return Page();
         }
+
 
         public async Task<IActionResult> OnPost(string SearchString)
         {
@@ -83,13 +80,9 @@ namespace CamHouse.Pages.CrudPages
                 }
                 catch
                 {
-                    //Just for testing
-                    for (int i = 0; i < 25; i++)
-                    {
-                        CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
-                    }
+                    return RedirectToPage("/Error");
 
-                }           
+                }
             }
             else
             {
@@ -110,11 +103,8 @@ namespace CamHouse.Pages.CrudPages
                 }
                 catch
                 {
-                    //Just for testing
-                    for (int i = 0; i < 5; i++)
-                    {
-                        CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
-                    }
+                    return RedirectToPage("/Error");
+
 
                 }
 

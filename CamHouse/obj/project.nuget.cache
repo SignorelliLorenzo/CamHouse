@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q/SNH3MlZyhLnyPz8aFHZuqEqJW0ZI1QAfCT2EHFKiHWG7YVG1rjfrwPm+2q+tDjpuHzVWWzXE8QBvNC7NcmFQ==",
+  "dgSpecHash": "jZN4SH2FS1AmnGncR+dcGKM6+eJxLdUI8kQ0/eGXkj2qYEnojCLvRQG/U6fTS63segNi82AB40OmtkepyQSrKg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\CamHouse\\CamHouse.csproj",
   "expectedPackageFiles": [
@@ -67,7 +67,7 @@
     "C:\\Users\\Gabry\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\Gabry\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Gabry\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\Gabry\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Gabry\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Gabry\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Gabry\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.4\\sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "C:\\Users\\Gabry\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",

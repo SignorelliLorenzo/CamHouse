@@ -3492,19 +3492,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\canej\\.nuget\\packages\\": {}
+    "C:\\Users\\Gabry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
+      "projectUniqueName": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
       "projectName": "Api_Telecamere_Library",
-      "projectPath": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
-      "packagesPath": "C:\\Users\\canej\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\canej\\Source\\Repos\\CamHouse_Git\\Api_Telecamere_Library\\Api_Telecamere_Library\\obj\\",
+      "projectPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\Api_Telecamere_Library.csproj",
+      "packagesPath": "C:\\Users\\Gabry\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Telecamere_Library\\Api_Telecamere_Library\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\canej\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

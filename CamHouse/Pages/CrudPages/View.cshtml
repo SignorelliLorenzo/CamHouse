@@ -25,9 +25,13 @@
 
             @foreach (var element in Model.EleView)
             {
+
                 <div class="cardcustom">
                     <div class="cardcustom-image">
-                        <img src="https://localhost:5001/api/url=http:%2F%2F202.245.13.81:80%2Fcgi-bin%2Fcamera%3Fresolution=640&amp;quality=1&amp;Language=0&amp;1645207194" alt="card-video">
+                        <object data="https://localhost:5001/api/url=@element.link.Replace("?","%3F").Replace("/","%2F")" type="image/jpeg">
+                        <img src="~/Img/external.png" alt="card-video" /> 
+                        </object>
+                        
                     </div>
                     <div class="cardcustom-text">
                         <span class="text">| Name » @element.nome</span>

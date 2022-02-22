@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {}
+    "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
+    "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+        "projectUniqueName": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
         "projectName": "Api_Pcto",
-        "projectPath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
-        "packagesPath": "C:\\Users\\ghilardi.17186\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ghilardi.17186\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\obj\\",
+        "projectPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+        "packagesPath": "C:\\Users\\Gabry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ghilardi.17186\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -102,6 +97,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -110,7 +111,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

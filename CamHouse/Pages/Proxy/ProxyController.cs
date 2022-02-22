@@ -19,7 +19,7 @@ namespace CamHouse.Pages.Proxy
     {
         // GET api/<ProxyController>/"url"
         [HttpGet("url={url}")]
-        public IActionResult Get(string url)
+        public async Task<IActionResult> Get(string url)
         {
             Byte[] bytes=null;
             try
@@ -49,16 +49,14 @@ namespace CamHouse.Pages.Proxy
             }
             catch (Exception ex)
             {
-                Response.StatusCode = 500;
+
+                return File(System.IO.File.ReadAllBytes("~/Img/external.png"), "image/png");
+
             }
 
             return File(bytes, "image/jpeg");
 
         }
-        [HttpGet]
-        public string Get()
-        {
-            return "ciao mondo";
-        }
+      
     }
 }

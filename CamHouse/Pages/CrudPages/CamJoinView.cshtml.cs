@@ -19,11 +19,16 @@ namespace CamHouse.Pages.CrudPages
 
 
         public Telecamera_Data telecamera {get;set;}
-             
+        
+        [BindProperty]
+        public int like { get; set; }
+        [BindProperty]
+        public int favorite { get; set; }
 
         public CamJoinViewModel(AppDbContext context, IConfiguration configuration)
         {
             this._context = context;
+            Configuration = configuration;
         }
 
         public async Task<IActionResult> OnGet(int? id)
@@ -36,21 +41,19 @@ namespace CamHouse.Pages.CrudPages
             {
                 GetTelecameraPerIdResponse risposta= null;
 
-                //try
-                //{
-                //    GetTelecameraPerIdResponse risposta2= new GetTelecameraPerIdResponse();
-                //    risposta2 =  MyApiService.GetByIdAsync((int)id, Configuration.GetSection("token").Value).Result; 
-                //}
-                //catch 
-                
+                try
+                {
+                    risposta = new GetTelecameraPerIdResponse();
+                    risposta = MyApiService.GetByIdAsync((int)id, Configuration.GetSection("token").Value).Result;
+                    like = risposta.Found_telecamera.num_like;
+                    favorite = risposta.Found_telecamera.num_salvati;
 
-                    risposta = new GetTelecameraPerIdResponse()
-                    {
-                    Success = true, Found_telecamera = new Telecamera_Data()
-                        {
-                            id = (int)id, link = "http://79.26.47.176:60001/cgi-bin/snapshot.cgi?chn=0&u=admin&p=&q=0&", nome = "Telecamera1", data_creazione = default, num_like = 0, num_salvati = 0
-                        }
-                    };
+                }
+                catch (Exception ex)
+                {
+
+                    return RedirectToPage("/Error");
+                }
                
                 if (risposta.Success)
                 {
@@ -64,6 +67,10 @@ namespace CamHouse.Pages.CrudPages
                 }
 
             }
+        }
+        public async Task<IActionResult> OnPost(string Request)
+        {
+            return Page();
         }
 
 
