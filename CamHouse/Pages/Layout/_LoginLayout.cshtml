@@ -1,6 +1,6 @@
 ﻿@using CamHouse.Models.User
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
     <title>Login</title>
 
@@ -16,8 +16,8 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script><!-- Sensitive -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script><!-- Sensitive -->
 </head>
 <body>
     <div class="LoginBody">
@@ -36,7 +36,7 @@
                     </li>
                     <li class="RealBodyLinksNavLogout">
                         <form class="form-inline LOForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                            <button href="" type="submit" class="logout"><i class='bx bx-exit bxlogout'></i> @User.Identity.Name</button>
+                            <button href="" type="submit" class="logout"><em class='bx bx-exit bxlogout'></em> @User.Identity.Name</button>
                         </form>
                     </li>
                     <li class="RealBodyLinksNav">
@@ -46,7 +46,7 @@
                         <a asp-area="" asp-page="/CrudPages/View">View</a>
                     </li>
                     <li class="RealBodyLinksNav">
-                        <a asp-area="" asp-page="/Index"><i class='bx bx-home-alt'></i>Home</a>
+                        <a asp-area="" asp-page="/Index"><em class='bx bx-home-alt'></em>Home</a>
                     </li>
                 }
                 else

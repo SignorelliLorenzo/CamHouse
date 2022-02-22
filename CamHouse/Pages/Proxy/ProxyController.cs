@@ -34,7 +34,6 @@ namespace CamHouse.Pages.Proxy
                 stream.Close();
                 bytes = ms.ToArray();
                 
-                
                 //var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
                 //var httpResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
                 //using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -42,7 +41,6 @@ namespace CamHouse.Pages.Proxy
                 //    using (BinaryReader reader = new BinaryReader(httpResponse.GetResponseStream()))
                 //    {
                 //         bytes = reader.ReadBytes(1 * 1024 * 1024 * 10);
-
                 //    }
                 //}
 

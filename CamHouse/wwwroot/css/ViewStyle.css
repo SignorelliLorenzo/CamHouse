@@ -1,4 +1,4 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 .navbarcustom {
     margin: 0;
     padding: 0;
@@ -71,7 +71,7 @@
     grid-template-columns: 350px;
     grid-template-rows: 310px 210px;
     grid-area: "cardcustom-image" "cardcustom-text";
-    font-family: roboto;
+    font-family: 'Press Start 2P', cursive;
     border-radius: 10px;
     background: white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
@@ -254,10 +254,6 @@
         border-radius: 5px;
     }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other
 @media screen and (max-width: 480px) {
-}
-
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-}
+}*/

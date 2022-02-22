@@ -90,7 +90,6 @@
     background-color: #b5f7e6;
     padding: 5px;
     font-weight: bold;
-    padding: 5px;
     outline: #53c0a2 2px;
     border: 2px solid #128061;
     border-radius: 5px;
@@ -356,8 +355,4 @@
         transform: scale(0.5);
     }
 
-}
-
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
 }

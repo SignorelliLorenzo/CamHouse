@@ -34,10 +34,12 @@
     height: 560px;
 }
 
-.Zone-img-stats{
+.Zone-img-stats {
     margin-right: 15.5%;
     padding: 10px 20px 20px 20px;
     font-size: 24px;
+    display: flex;
+    float: right;
 }
 
     .Zone-img-stats a {
@@ -78,7 +80,6 @@
         background-color: #b5f7e6;
     }
 
-    /**/
     .navbarcustom {
         margin: 0;
         padding: 0;
@@ -181,4 +182,9 @@
 
     .RealBodyLinksNavLogout .bxlogout:hover {
         background-color: #128061;
+    }
+
+
+    .form-like, .form-pref{
+        display: inline-block;
     }

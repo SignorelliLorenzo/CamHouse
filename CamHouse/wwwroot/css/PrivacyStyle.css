@@ -8,18 +8,6 @@
     box-sizing: border-box;
 }
 
-.RealBodyLinksNavLogout button {
-    text-decoration: none;
-    text-align: center;
-    font-size: 24px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    border: 1px solid #266352;
-    width: 300px;
-    border-radius: 0 15px 0 15px;
-    color: #128061;
-    background-color: white;
-}
-
 .Body-Privacy {
     padding: 20px;
     margin: 10px;
@@ -136,10 +124,6 @@
     background-color: white;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other
 @media screen and (max-width: 480px) {
-}
-
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-}
+}*/

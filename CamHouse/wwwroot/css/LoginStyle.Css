@@ -51,33 +51,24 @@
     text-align: center;
     padding: 5px;
     font-weight: bold;
-    padding: 5px;
     outline: #53c0a2 2px;
     border: 2px solid #128061;
     border-radius: 5px;
     background-color: #b5f7e6;
 }
 
-/* Input Passa al Login */
 .RegisterLogin {
     font-size: 24px;
-    margin: 10px 0 0 0px;
+    margin: 26px;
     width: 500px;
     color: #266352;
+    display: inline-block;
     text-align: center;
     text-decoration: none;
     padding: 5px;
     font-family: 'Bungee', cursive;
-}
-
-.RegisterLogin {
-    display: inline-block;
-    margin: 26px;
-    padding: 10px;
     border: 2px solid #128061;
     border-radius: 20px 5px 20px 5px;
-    width: 500px;
-    text-align: center;
 }
 
     .RegisterLogin a {
@@ -351,8 +342,4 @@
     #Subtitle-login, #Psw_forgot_text, #Resend_Verify_Text, .RegisterLogin, #Ricordami_text{
         margin: 5px 0 5px 0;
     }
-}
-
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
 }
