@@ -1,5 +1,4 @@
 ﻿using CamHouse.Data;
-
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -12,7 +11,7 @@ using Api_Telecamere_Library;
 using Api_Telecamere_Library.Models;
 using Microsoft.Extensions.Configuration;
 
-namespace CamHouse.Pages
+namespace CamHouse.Pages.CrudPages
 {
 
     [Authorize]
@@ -21,30 +20,108 @@ namespace CamHouse.Pages
     {
         public IConfiguration Configuration { get; }
         private readonly AppDbContext _context;
-  
+        [BindProperty]
+        public int elementnumber { get; }
         public ViewModel(AppDbContext context, IConfiguration configuration)
         {
             this._context = context;
             Configuration = configuration;
-            elecamere = _context.CameraAppDb.ToList();
-            
+            elementnumber = int.Parse(configuration.GetSection("ItemPerpage").Value);
         }
+       
         [BindProperty]
-        public Telecamera_Data camera { get; set; }
+        public List<Telecamera_Data> EleView { get; set; }
         [BindProperty]
-        public IList<Telecamera_Data> elecamere { get; set; }
+        public List<Telecamera_Data> CompleteList { get; set; }
+        [BindProperty]
+        public int pageNumber { get; set; }
+        private List<Telecamera_Data> GetPageView(List<Telecamera_Data> CompleteList, int Page, int ItemsPerPage)
+        {         
+            List<Telecamera_Data>  View = new List<Telecamera_Data>();
+            int? num = (Page + 1) * ItemsPerPage - ItemsPerPage;
+            int x = 0;
 
-        public void OnGet()
-        {           
-            try
+            while (x < 10 && (num + x ) < CompleteList.Count())
             {
-               elecamere = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+                View.Add(CompleteList[(int)num + x]);
+                x++;
             }
-            catch
-            {
-
-            }
+            return View;
         }
-      
+        public async Task<IActionResult> OnGet()
+        {
+                try
+                {
+                    CompleteList = new List<Telecamera_Data>();
+
+                    CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+                }
+                catch
+                {
+                    //Just for testing
+                    for (int i = 0; i < 25; i++)
+                    {
+                    CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
+                    }
+
+                }
+
+            EleView = GetPageView(CompleteList, pageNumber, elementnumber);
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPost(string SearchString)
+        {
+
+            if (String.IsNullOrEmpty(SearchString))
+            {
+                try
+                {
+                    CompleteList = new List<Telecamera_Data>();
+
+                    CompleteList = MyApiService.GetAll(Configuration.GetSection("token").Value).Result;
+                }
+                catch
+                {
+                    //Just for testing
+                    for (int i = 0; i < 25; i++)
+                    {
+                        CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
+                    }
+
+                }           
+            }
+            else
+            {
+
+                try
+                {
+
+                    var result = MyApiService.GetByNameAsync(SearchString,Configuration.GetSection("token").Value).Result;
+                    if(result.Success)
+                    {
+                        CompleteList = result.Found_telecameras;
+                    }
+                    else
+                    {
+                        CompleteList = new List<Telecamera_Data>();
+                    }
+
+                }
+                catch
+                {
+                    //Just for testing
+                    for (int i = 0; i < 5; i++)
+                    {
+                        CompleteList.Add(new Telecamera_Data($"telecamera{i}", $"link{i}", 0, 0));
+                    }
+
+                }
+
+            }
+            EleView = GetPageView(CompleteList, pageNumber, elementnumber);
+            return Page();
+        }
+
     }
 }
