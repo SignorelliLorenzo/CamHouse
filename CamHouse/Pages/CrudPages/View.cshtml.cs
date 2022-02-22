@@ -48,7 +48,7 @@ namespace CamHouse.Pages.CrudPages
             }
             return View;
         }
-        public async Task<IActionResult> OnGet()
+        public async Task<IActionResult> OnGet() 
         {
             MyApiService.url = "https://localhost:44302/";
             try

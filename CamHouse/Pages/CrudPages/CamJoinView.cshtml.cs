@@ -19,7 +19,9 @@ namespace CamHouse.Pages.CrudPages
 
 
         public Telecamera_Data telecamera {get;set;}
-        
+
+        [BindProperty]
+        public string link { get; set; }
         [BindProperty]
         public int like { get; set; }
         [BindProperty]
@@ -43,8 +45,10 @@ namespace CamHouse.Pages.CrudPages
 
                 try
                 {
+                    
                     risposta = new GetTelecameraPerIdResponse();
                     risposta = MyApiService.GetByIdAsync((int)id, Configuration.GetSection("token").Value).Result;
+                    link = risposta.Found_telecamera.link;
                     like = risposta.Found_telecamera.num_like;
                     favorite = risposta.Found_telecamera.num_salvati;
 
@@ -70,6 +74,7 @@ namespace CamHouse.Pages.CrudPages
         }
         public async Task<IActionResult> OnPost(string Request)
         {
+
             return Page();
         }
 

@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using CamHouse.Models.User
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -19,8 +20,8 @@
 </head>
 <body>
     <div class="ViewBody">
-        @inject SignInManager<IdentityUser> SignInManager
-        @inject UserManager<IdentityUser> UserManager
+        @inject SignInManager<UserData> SignInManager
+        @inject UserManager<UserData> UserManager
         <!-- Navbar -->
         <div class="navbarcustom">
             <ul>

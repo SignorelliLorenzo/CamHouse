@@ -11,16 +11,18 @@
 
             <div class="Zone-img">
                 <div class="Zone-img-view">
-                        <img id="video" src="https://localhost:5001/api/url=@Model.telecamera.link"  onerror="ErrorImage()"/>
+                        <img id="video" src="https://localhost:5001/api/url=@Model.link"  onerror="ErrorImage()"/>
                 </div>
                      <div class="Zone-img-stats">
                         <p class="Zone-img-stats-title"></p>
                         <form method="post">
-                            <button class="Zone-img-stats-like"><i class='bx bx-like'></i> Like</button>
+                            <button type="submit" name="Like" class="Zone-img-stats-like"><i class='bx bx-like'></i> Like</button>
+                            <input type="hidden" value="@Model.link"/>
                         </form>
 
                         <form method="post">
-                            <button class="Zone-img-stats-pref"><i class='bx bx-bookmarks'></i> Preferiti</button>
+                            <button type="submit" name="Favorite"class="Zone-img-stats-pref"><i class='bx bx-bookmarks'></i> Preferiti</button>
+                            <input type="hidden" value="@Model.link"/>
                         </form>
                     </div>
             </div>

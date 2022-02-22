@@ -26,6 +26,8 @@ namespace CamHouse.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Liked = table.Column<string>(type: "TEXT", nullable: true),
+                    Favorites = table.Column<string>(type: "TEXT", nullable: true),
                     UserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "TEXT", maxLength: 256, nullable: true),
@@ -44,23 +46,6 @@ namespace CamHouse.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CameraAppDb",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    data_creazione = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    nome = table.Column<string>(type: "TEXT", nullable: false),
-                    link = table.Column<string>(type: "TEXT", nullable: false),
-                    num_like = table.Column<int>(type: "INTEGER", nullable: false),
-                    num_salvati = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CameraAppDb", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -223,9 +208,6 @@ namespace CamHouse.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "CameraAppDb");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
