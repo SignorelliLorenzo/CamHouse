@@ -30,12 +30,15 @@ def speech_to_text(audio):
     r = sr.Recognizer()
 
     # apri il file
-    with sr.AudioFile(audio) as source:
-        # ascolta i dati (carica l'audio in memoria)
-        audio_data = r.record(source)
-        # riconosce (converte l'audio in testo)
-        text = r.recognize_google(audio_data, language="it-IT")
-        return text
+    try:
+        with sr.AudioFile(audio) as source:
+            # ascolta i dati (carica l'audio in memoria)
+            audio_data = r.record(source)
+            # riconosce (converte l'audio in testo)
+            text = r.recognize_google(audio_data, language="it-IT")
+            return text
+    except Exception as ex:
+        return "Error: "+str(ex)
     #per avviare: python ./Speech_Recognition_ByAudioFile.py AudioIta.wav
 def token_required(f):
     @wraps(f)
