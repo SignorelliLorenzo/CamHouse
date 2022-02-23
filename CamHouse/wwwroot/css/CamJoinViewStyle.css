@@ -54,6 +54,8 @@
     float: left;
     padding: 20px;
     margin-left: 17.7%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .Zone-img-stats-like, .Zone-img-stats-pref {

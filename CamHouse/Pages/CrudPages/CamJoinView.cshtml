@@ -13,17 +13,41 @@
                     @*<img id="video" src="https://localhost:5001/api/url=@Model.link" alt="Cam View" onerror="ErrorImage()" />*@
                     <img id="video" src="https://localhost:5001/api/url=@Model.link" alt="Cam View" onerror="ErrorImage()" onload="imageRefresh(this,1000)" />
                 </div>
-                     <div class="Zone-img-stats">
-                        <p class="Zone-img-stats-title"></p>
-                        <form class="form-like" method="post">
-                            <button type="submit" name="Like" class="Zone-img-stats-like"><em class='bx bx-like'></em> Like</button>
-                            <input type="hidden" value="@Model.link"/>
-                        </form>
-                        <form class="form-pref" method="post">
-                            <button type="submit" name="Favorite"class="Zone-img-stats-pref"><em class='bx bx-bookmarks'></em> Preferiti</button>
-                            <input type="hidden" value="@Model.link"/>
-                        </form>
-                    </div>
+                <div class="Zone-img-stats">
+                    <p class="Zone-img-stats-title">
+                        <span class="text">| Numero Like » @Model.telecamera.num_like</span>
+                        <span class="text">| Numero Salvati » @Model.telecamera.num_salvati</span>
+                    </p>
+                    <form class="form-like" method="post">
+                        <input type="hidden" asp-for="@Model.telecamera.id" value="@Model.telecamera.id" />
+                        <input type="hidden" asp-for="@Model.telecamera.nome" value="@Model.telecamera.nome" />
+                        <input type="hidden" asp-for="@Model.telecamera.link" value="@Model.telecamera.link" />
+                        <input type="hidden" asp-for="@Model.telecamera.num_like" value="@Model.telecamera.num_like" />
+                        <input type="hidden" asp-for="@Model.telecamera.num_salvati" value="@Model.telecamera.num_salvati" />
+                        <input type="hidden" asp-for="@Model.telecamera.data_creazione" value="@Model.telecamera.data_creazione" />
+
+                        <input type="hidden" asp-for="@Model.checkLike" value="@Model.checkLike" />
+                        <input type="hidden" asp-for="@Model.checkSalvati" value="@Model.checkSalvati" />
+
+                        <button type="submit" name="Like" class="Zone-img-stats-like" value="Like"><em class='bx bx-like'></em> Like</button>
+                        <input type="hidden" value="@Model.link" />
+                    </form>
+                    <form class="form-pref" method="post">
+                        <input type="hidden" asp-for="@Model.telecamera.id" value="@Model.telecamera.id" />
+                        <input type="hidden" asp-for="@Model.telecamera.nome" value="@Model.telecamera.nome" />
+                        <input type="hidden" asp-for="@Model.telecamera.link" value="@Model.telecamera.link" />
+                        <input type="hidden" asp-for="@Model.telecamera.num_like" value="@Model.telecamera.num_like" />
+                        <input type="hidden" asp-for="@Model.telecamera.num_salvati" value="@Model.telecamera.num_salvati" />
+                        <input type="hidden" asp-for="@Model.telecamera.data_creazione" value="@Model.telecamera.data_creazione" />
+
+                        <input type="hidden" asp-for="@Model.checkLike" value="@Model.checkLike" />
+                        <input type="hidden" asp-for="@Model.checkSalvati" value="@Model.checkSalvati" />
+
+                        <button type="submit" name="Favorite" class="Zone-img-stats-pref" value="Favorite"><em class='bx bx-bookmarks'></em> Preferiti</button>
+                        <input type="hidden" value="@Model.link" />
+                    </form>
+                    <asp:label id="Message" runat="server" />
+                </div>
             </div>
 
         </div>

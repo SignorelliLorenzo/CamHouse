@@ -37,8 +37,10 @@ namespace Api_Telecamere_Library
             this.num_like = num_like;
             this.num_salvati = num_salvati;
         }
+        public Telecamera() { }
+
     }
-    
+
 
 
     /// <summary>
@@ -63,5 +65,6 @@ namespace Api_Telecamere_Library
         {
             data_creazione = DateTime.Now;
         }
+        public Telecamera_Data(){ }
     }
 }

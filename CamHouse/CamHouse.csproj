@@ -22,14 +22,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Api_Telecamere_Library">
-      <HintPath>Api_Telecamere_Library.dll</HintPath>
-    </Reference>
+    <Folder Include="Database\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Database\" />
-    <Folder Include="Migrations\" />
+    <Reference Include="Api_Telecamere_Library">
+      <HintPath>Api_Telecamere_Library.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

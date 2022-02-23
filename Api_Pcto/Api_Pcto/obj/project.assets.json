@@ -8492,27 +8492,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\firriolo.17184\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\elena\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\firriolo.17184\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+      "projectUniqueName": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
       "projectName": "Api_Pcto",
-      "projectPath": "C:\\Users\\firriolo.17184\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
-      "packagesPath": "C:\\Users\\firriolo.17184\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\firriolo.17184\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\obj\\",
+      "projectPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+      "packagesPath": "C:\\Users\\elena\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\Api_Pcto\\Api_Pcto\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\firriolo.17184\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\elena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -8602,7 +8595,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
