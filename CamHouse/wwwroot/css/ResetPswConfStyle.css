@@ -17,7 +17,7 @@
   background-color: #1bead9;
 }
 
-#Title-fpc {
+#Title-rpc {
   text-align: center;
   font-size: 54px;
   padding: 5px;
@@ -27,7 +27,7 @@
   font-family: "Space Grotesk", sans-serif;
 }
 
-.Subtitle-fpc {
+.Subtitle-rpc {
   text-align: left;
   color: white;
   width: 500px;
@@ -38,22 +38,22 @@
   margin: 10px 27% 40px 27%;
 }
 
-.txt-fpc {
+.txt-rpc {
   padding: 30px;
   margin: 20px;
   text-align: center;
 }
 
-#img-fpc {
+#img-rpc {
   width: 500px;
   text-align: center;
 }
 
-.Social-fpc {
+.Social-rpc {
   margin: 20px 0 0 0;
 }
 
-.Social-fpc a {
+.Social-rpc a {
   font-size: 54px;
   text-decoration: none;
   color: #4f4e79;
@@ -209,7 +209,7 @@
   background-color: white;
 }
 
-.fpcIndex {
+.rpswclogin {
   width: 200px;
   border: 1px solid #008b8b;
   border-radius: 15px;

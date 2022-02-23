@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elena\\source\\repos\\CamHouse\\CamHouse\\CamHouse.csproj": {}
+    "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elena\\source\\repos\\CamHouse\\CamHouse\\CamHouse.csproj": {
+    "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elena\\source\\repos\\CamHouse\\CamHouse\\CamHouse.csproj",
+        "projectUniqueName": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
         "projectName": "CamHouse",
-        "projectPath": "C:\\Users\\elena\\source\\repos\\CamHouse\\CamHouse\\CamHouse.csproj",
+        "projectPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\CamHouse.csproj",
         "packagesPath": "C:\\Users\\elena\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elena\\source\\repos\\CamHouse\\CamHouse\\obj\\",
+        "outputPath": "C:\\Users\\elena\\Source\\Repos\\CamHouse\\CamHouse\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\elena\\AppData\\Roaming\\NuGet\\NuGet.Config",
