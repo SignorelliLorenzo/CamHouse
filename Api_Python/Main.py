@@ -111,9 +111,9 @@ def login():
 # REGISTER
 @app.route('/Register', methods =['POST'])
 @token_required
-def register(AuthUser):
+def register(auth_user):
     # creates a dictionary of the form data
-    if not AuthUser.Admin:
+    if not auth_user.Admin:
         return make_response('Unauthorized', 401)
     data = request.args
   
@@ -152,7 +152,7 @@ def register(AuthUser):
 # POST
 @app.route('/', methods=['POST'])
 @token_required
-def Post(data):
+def post(data):
     return speech_to_text(io.BytesIO(request.data))
 
      
