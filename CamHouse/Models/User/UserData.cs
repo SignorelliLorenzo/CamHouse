@@ -7,7 +7,6 @@ namespace CamHouse.Models.User
         [PersonalData]
         public string Liked { get; set; }
         [PersonalData]
-
         public string Favorites { get; set; }
     }
 }

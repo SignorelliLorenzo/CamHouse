@@ -193,7 +193,7 @@ namespace CamHouse.Pages.CrudPages
                         else
                         {
                             _userManager.GetUserAsync(User).Result.Favorites = _userManager.GetUserAsync(User).Result.Favorites.Replace($"|{telecamera.id}", "");
-                    }
+                        }
                 }
 
                     await _userManager.UpdateAsync(_userManager.GetUserAsync(User).Result);

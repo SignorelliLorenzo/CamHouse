@@ -1308,3 +1308,8 @@ C:\Users\firriolo.17184\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\CamHouse
 C:\Users\firriolo.17184\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\CamHouse.genruntimeconfig.cache
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
 C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ResetPswConfirmLayout.cshtml.g.cs
+C:\Users\Gabry\source\repos\CamHouse\CamHouse\bin\Debug\net5.0\SendGrid.dll
+C:\Users\Gabry\source\repos\CamHouse\CamHouse\bin\Debug\net5.0\StarkbankEcdsa.dll
+C:\Users\Gabry\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
+C:\Users\Gabry\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ResetPswConfirmLayout.cshtml.g.cs
+C:\Users\Gabry\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs

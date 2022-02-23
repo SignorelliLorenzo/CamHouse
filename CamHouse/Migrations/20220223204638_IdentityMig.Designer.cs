@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CamHouse.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220222193426_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220223204638_IdentityMig")]
+    partial class IdentityMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

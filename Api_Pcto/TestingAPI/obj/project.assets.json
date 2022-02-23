@@ -10806,19 +10806,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elena\\.nuget\\packages\\": {}
+    "C:\\Users\\Gabry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\TestingAPI\\TestingAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\TestingAPI\\TestingAPI.csproj",
       "projectName": "TestingAPI",
-      "projectPath": "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\TestingAPI\\TestingAPI.csproj",
-      "packagesPath": "C:\\Users\\elena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\TestingAPI\\obj\\",
+      "projectPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\TestingAPI\\TestingAPI.csproj",
+      "packagesPath": "C:\\Users\\Gabry\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\TestingAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10832,8 +10832,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
-              "projectPath": "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj"
+            "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj": {
+              "projectPath": "C:\\Users\\Gabry\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj"
             }
           }
         }
@@ -10880,7 +10880,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

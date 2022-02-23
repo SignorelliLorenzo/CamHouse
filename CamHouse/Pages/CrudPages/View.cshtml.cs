@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using Api_Telecamere_Library;
 using Api_Telecamere_Library.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Identity;
+using CamHouse.Models.User;
+using Api_Telecamere_Library.Models.DTOS.Responses;
 
 namespace CamHouse.Pages.CrudPages
 {
@@ -20,10 +23,14 @@ namespace CamHouse.Pages.CrudPages
     {
         public IConfiguration Configuration { get; }
         private readonly AppDbContext _context;
+        private readonly SignInManager<UserData> _signInManager;
+        private readonly UserManager<UserData> _userManager;
         [BindProperty]
         public int elementnumber { get; }
-        public ViewModel(AppDbContext context, IConfiguration configuration)
+        public ViewModel(AppDbContext context, IConfiguration configuration, SignInManager<UserData> signInManager, UserManager<UserData> userManager)
         {
+            this._signInManager = signInManager;
+            this._userManager = userManager;
             this._context = context;
             Configuration = configuration;
             elementnumber = int.Parse(configuration.GetSection("ItemPerpage").Value);
@@ -68,9 +75,23 @@ namespace CamHouse.Pages.CrudPages
         }
 
 
-        public async Task<IActionResult> OnPost(string SearchString)
+        public async Task<IActionResult> OnPost(string SearchString,string Preferiti)
         {
-
+            if(!String.IsNullOrEmpty(Preferiti))
+            {
+                var ids = _userManager.GetUserAsync(User).Result.Favorites;
+                GetTelecameraPerIdResponse result;
+                foreach (var id in ids.Split("|"))
+                {
+                    if (id != "")
+                    {
+                        result = MyApiService.GetByIdAsync(int.Parse(id), Configuration.GetSection("token").Value).Result;
+                        CompleteList.Add(result.Found_telecamera);
+                    }
+                }
+                EleView = GetPageView(CompleteList, pageNumber, elementnumber);
+                return Page();
+            }
             if (String.IsNullOrEmpty(SearchString))
             {
                 try

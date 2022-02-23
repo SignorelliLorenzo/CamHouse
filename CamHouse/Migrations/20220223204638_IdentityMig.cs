@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CamHouse.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class IdentityMig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

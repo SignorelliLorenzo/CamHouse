@@ -19,11 +19,11 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="SendGrid" Version="9.25.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Database\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>
