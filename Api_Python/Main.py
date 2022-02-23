@@ -13,6 +13,7 @@ import jwt
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
+
 app.config['SECRET_KEY']='Th1s1ss3cr3t'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///Users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -61,7 +62,7 @@ def token_required(f):
             return jsonify({
                 'message' : 'Token has expired !!'
             }), 401
-        except:
+        except Exception:
             return jsonify({
                 'message' : 'Token is invalid !!'
             }), 401
@@ -111,9 +112,9 @@ def login():
 # REGISTER
 @app.route('/Register', methods =['POST'])
 @token_required
-def register(AuthUser):
+def register(auth_user):
     # creates a dictionary of the form data
-    if not AuthUser.Admin:
+    if not auth_user.Admin:
         return make_response('Unauthorized', 401)
     data = request.args
   
@@ -152,7 +153,7 @@ def register(AuthUser):
 # POST
 @app.route('/', methods=['POST'])
 @token_required
-def Post(data):
+def post(data):
     return speech_to_text(io.BytesIO(request.data))
 
      
