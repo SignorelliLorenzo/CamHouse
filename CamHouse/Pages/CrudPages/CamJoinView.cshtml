@@ -10,8 +10,8 @@
         <div class="colcustom10">
             <div class="Zone-img">
                 <div class="Zone-img-view">
-                    @*<img id="video" src="https://localhost:5001/api/url=@Model.link" onerror="ErrorImage()" />*@
-                    <img id="video" src="https://localhost:5001/api/url=@Model.link" onerror="ErrorImage()" onload="imageRefresh(this,1000)" />
+                    @*<img id="video" src="https://localhost:5001/api/url=@Model.link" alt="Cam View" onerror="ErrorImage()" />*@
+                    <img id="video" src="https://localhost:5001/api/url=@Model.link" alt="Cam View" onerror="ErrorImage()" onload="imageRefresh(this,1000)" />
                 </div>
                      <div class="Zone-img-stats">
                         <p class="Zone-img-stats-title"></p>
@@ -68,11 +68,15 @@
 
     function imageRefresh(img, timeout) {
         setTimeout(function () {
-            var d = new Date;
-            var http = img.src;
-            if (http.indexOf("&d=") != -1) { http = http.split("&d=")[0]; }
 
-            img.src = http + '&d=' + d.getTime();
+            if (img.id === "video") {
+                var d = new Date;
+                var http = img.src;
+                if (http.indexOf("&d=") != -1) { http = http.split("&d=")[0]; }
+                img.src = http + '&d=' + d.getTime();
+            }
+
         }, timeout);
+
     }
 </script>

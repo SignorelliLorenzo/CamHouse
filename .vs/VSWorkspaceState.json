@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CamHouse"
   ],
-  "SelectedNode": "\\CamHouse.sln (CamHouse\\CamHouse.sln)",
+  "SelectedNode": "\\CamHouse\\CamHouse.sln",
   "PreviewInSolutionExplorer": false
 }
