@@ -13,6 +13,7 @@ import jwt
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
+
 app.config['SECRET_KEY']='Th1s1ss3cr3t'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///Users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -61,7 +62,7 @@ def token_required(f):
             return jsonify({
                 'message' : 'Token has expired !!'
             }), 401
-        except:
+        except Exception:
             return jsonify({
                 'message' : 'Token is invalid !!'
             }), 401
