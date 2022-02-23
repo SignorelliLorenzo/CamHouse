@@ -1,26 +1,39 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
-
-<ul class="navbar-nav">
-@if (SignInManager.IsSignedIn(User))
-{
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post" >
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
-    </li>
-}
-else
-{
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
-}
+﻿@using CamHouse.Models.User
+@inject SignInManager<UserData> SignInManager
+@inject UserManager<UserData> UserManager
+<!-- Navbar -->
+<ul>
+    @if (SignInManager.IsSignedIn(User))
+    {
+        @*<li class="RealBodyLinksNav">
+                <a asp-area="Identity" asp-page="/Account/Register">Account</a>
+            </li>*@
+        <li style="float: left;" class="loader-nav-namelogo">
+            <a>Cam<br>House</a>
+        </li>
+        <li class="RealBodyLinksNavLogout">
+            <form class="form-inline LOForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                <button href="" type="submit" class="logout"><em class='bx bx-exit bxlogout'></em> @User.Identity.Name</button>
+            </form>
+        </li>
+        <li class="RealBodyLinksNav">
+            <a asp-area="" asp-page="/CrudPages/Privacy">Privacy</a>
+        </li>
+        <li class="RealBodyLinksNav">
+            <a asp-area="" asp-page="/CrudPages/View">View</a>
+        </li>
+        <li class="RealBodyLinksNav">
+            <a asp-area="" asp-page="/Index"><em class='bx bx-home-alt'></em>Home</a>
+        </li>
+    }
+    else
+    {
+        <li style="float: left;" class="loader-nav-namelogo">
+            <a>Cam<br>House</a>
+        </li>
+        <li class="RealBodyLinksNav">
+            <a asp-area="Identity" asp-page="/Account/Login">Account</a>
+        </li>
+    }
 </ul>
+
