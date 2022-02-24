@@ -1,258 +1,272 @@
-﻿
-.navbarcustom {
-    margin: 0;
-    padding: 0;
-    height: 124px;
+﻿.navbarcustom {
+  margin: 0;
+  padding: 0;
+  height: 124px;
 }
 
-    .navbarcustom ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: white;
-    }
+.navbarcustom ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
 
-    .navbarcustom li {
-        float: right;
-        background-color: white;
-    }
+.navbarcustom li {
+  float: right;
+  background-color: white;
+}
 
 .RealBodyLinksNav {
-    display: inline-block;
-    margin: 24px 10px 22px 10px;
-    padding: 20px 10px 20px 10px;
-    width: 150px;
-    height: 80px;
-    text-align: center;
+  display: inline-block;
+  margin: 24px 10px 22px 10px;
+  padding: 20px 10px 20px 10px;
+  width: 150px;
+  height: 80px;
+  text-align: center;
 }
 
-    .RealBodyLinksNav a {
-        text-decoration: none;
-        color: black;
-        text-align: center;
-        font-size: 24px;
-        font-family: 'Montserrat Alternates', sans-serif;
-    }
+.RealBodyLinksNav a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Montserrat Alternates", sans-serif;
+}
 
-        .RealBodyLinksNav a:hover {
-            text-decoration: none;
-        }
+.RealBodyLinksNav a:hover {
+  text-decoration: none;
+}
 
-        .RealBodyLinksNav a, .loader-nav-namelogo a, .RealBodyLinksNav a i {
-            background-color: white;
-        }
+.RealBodyLinksNav a,
+.loader-nav-namelogo a,
+.RealBodyLinksNav a i {
+  background-color: white;
+}
 
 .loader-nav-namelogo {
-    padding: 5px;
-    display: inline-block;
-    text-decoration: none;
-    margin: 10px 0px 10px 30px;
-    text-align: left;
-    color: black;
-    font-size: 32px;
-    font-family: 'Press Start 2P', cursive;
+  padding: 5px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px 0px 10px 30px;
+  text-align: left;
+  color: black;
+  font-size: 32px;
+  font-family: "Press Start 2P", cursive;
 }
 
 .Body-view {
-    display: flex;
-    overflow: hidden;
+  display: flex;
+  overflow: hidden;
 }
 
-.colcustom{
-    display: contents;
-    padding: 20px;
-    margin: 20px;
+.colcustom {
+  display: contents;
+  padding: 20px;
+  margin: 20px;
 }
 
 .cardcustom {
-    display: grid;
-    width: 350px;
-    grid-template-columns: 350px;
-    grid-template-rows: 310px 210px;
-    grid-area: "cardcustom-image" "cardcustom-text";
-    font-family: 'Press Start 2P', cursive;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-    text-align: center;
-    margin: 17px;
+  display: grid;
+  width: 350px;
+  grid-template-columns: 350px;
+  grid-template-rows: 310px 210px;
+  grid-area: "cardcustom-image" "cardcustom-text";
+  font-family: "Press Start 2P", cursive;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  margin: 17px;
 }
 
 .cardcustom-image {
-    grid-area: "cardcustom-image";
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+  grid-area: "cardcustom-image";
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-    .cardcustom-image img {
-        width: 100%;
-        height: 100%;
-    }
-    .cardcustom-image object {
-        width: 100%;
-        height: 100%;
-    }
+.cardcustom-image img {
+  width: 100%;
+  height: 100%;
+}
+.cardcustom-image object {
+  width: 100%;
+  height: 100%;
+}
 
 .cardcustom-text {
-    grid-area: "cardcustom-text";
-    margin: 25px;
+  grid-area: "cardcustom-text";
+  margin: 25px;
 }
 
-    .cardcustom-text p {
-        color: gray;
-        font-size: 20px;
-        text-align: left;
-        margin: 5px;
-    }
+.cardcustom-text p {
+  color: gray;
+  font-size: 20px;
+  text-align: left;
+  margin: 5px;
+}
 
-    .cardcustom-text span{
-        text-align: left;
-        display: block;
-    }
+.cardcustom-text span {
+  text-align: left;
+  display: block;
+}
 
-    .cardcustom-text b {
-        color: black;
-    }
+.cardcustom-text b {
+  color: black;
+}
 
-    .cardcustom-text hr {
-        margin: 20px 5px 20px 5px;
-    }
+.cardcustom-text hr {
+  margin: 20px 5px 20px 5px;
+}
 
 .BtnGo {
-    color: #266352;
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 10px 75px 10px 75px;
-    border-radius: 15px 0 15px 0;
-    border: 2px solid #128061;
+  color: #23aea3;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px 75px 10px 75px;
+  border-radius: 15px 0 15px 0;
+  border: 2px solid #008b8b;
 }
 
-    .BtnGo:hover {
-        border-radius: 0 15px 0 15px;
-        color: #266352;
-    }
+.BtnGo:hover {
+  border-radius: 0 15px 0 15px;
+  color: white;
+  background-color: #23aea3;
+}
 
 .bxhomeicon {
-    background-color: white;
-    font-size: 24px;
+  background-color: white;
+  font-size: 24px;
 }
 
 .bxlogout {
-    font-size: 30px;
-    transform: translateY(5px);
+  font-size: 30px;
+  transform: translateY(5px);
 }
 
 .RealBodyLinksNavLogout {
-    display: inline-block;
-    margin: 20px 30px 20px 10px;
-    padding: 20px 10px 20px 10px;
-    width: 300px;
-    height: 80px;
-    text-align: center;
-    background-color: white;
+  display: inline-block;
+  margin: 20px 30px 20px 10px;
+  padding: 20px 10px 20px 10px;
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background-color: white;
 }
 
-    .RealBodyLinksNavLogout button {
-        text-decoration: none;
-        text-align: center;
-        font-size: 24px;
-        font-family: 'Montserrat Alternates', sans-serif;
-        border: 1px solid #266352;
-        width: 300px;
-        border-radius: 0 15px 0 15px;
-        color: #128061;
-        background-color: white;
-    }
+.RealBodyLinksNavLogout button {
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Montserrat Alternates", sans-serif;
+  border: 1px solid #266352;
+  width: 300px;
+  border-radius: 0 15px 0 15px;
+  color: #128061;
+  background-color: white;
+}
 
-        .RealBodyLinksNavLogout button:hover {
-            text-decoration: none;
-            text-align: center;
-            font-size: 24px;
-            font-family: 'Montserrat Alternates', sans-serif;
-            border: 1px solid #266352;
-            width: 300px;
-            border-radius: 15px 0 15px 0;
-            color: #b5f7e6;
-            background-color: #128061;
-        }
+.RealBodyLinksNavLogout button:hover {
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Montserrat Alternates", sans-serif;
+  border: 1px solid #266352;
+  width: 300px;
+  border-radius: 15px 0 15px 0;
+  color: #b5f7e6;
+  background-color: #128061;
+}
 
-    .RealBodyLinksNavLogout .bxlogout:hover {
-        background-color: #128061;
-    }
+.RealBodyLinksNavLogout .bxlogout:hover {
+  background-color: #128061;
+}
 
 .LOForm {
-    background-color: white;
+  background-color: white;
 }
 
-.nav-mid{
-    text-align: center;
-    display: inline-block;
-    width: 1400px;
-    padding: 20px;
-    margin: 20px 0 20px 0;
-    background-color: #b5f7e6;
+.nav-mid {
+  text-align: center;
+  display: inline-block;
+  width: 1400px;
+  padding: 20px;
+  margin: 20px 0 20px 0;
 }
 
-.SBForm, .FForm, .STTForm{
-    display: inline;
-    width: 200px;
-    padding: 20px;
-    margin: 10px;
+.SBForm,
+.FForm,
+.STTForm {
+  display: inline;
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
 }
 
 .searchbox {
-    background-color: white;
-    color: #266352;
-    border: 1px solid #266352;
-    border-radius: 10px 0 0 10px;
-    font-size: 24px;
-    outline: #266352 2px;
-    padding: 5px;
+  background-color: white;
+  color: white;
+  border: 1px solid #23aea3;
+  border-radius: 10px 0 0 10px;
+  font-size: 24px;
+  background-color: #1bead9;
+  outline: #23aea3 2px;
+  padding: 5px;
 }
 
-.perferiti-text, .speak-text, .cerca {
-    font-size: 24px;
-    width: 200px;
-    padding: 5px;
-    background-color: white;
-    border: 1px solid #266352;
-    border-radius: 15px;
+.searchbox::placeholder {
+  color: white;
+  font-weight: lighter;
 }
 
-.cerca{
-    border-radius: 0 10px 10px 0;
+.perferiti-text,
+.speak-text,
+.cerca {
+  font-size: 24px;
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #23aea3;
+  background-color: #1bead9;
+  color: darkslategrey;
+  font-weight: bold;
+  border-radius: 15px;
 }
 
-.bxs-star, .bxs-user-voice{
-    font-size: 30px;
-    transform: translateY(3px);
+.cerca {
+  border-radius: 0 10px 10px 0;
 }
 
-.rowcustom{
-    padding: 20px;
-    margin: 10px;
-    display: inline-block;
-    width: 700px;
+.bxs-star,
+.bxs-user-voice {
+  font-size: 30px;
+  transform: translateY(3px);
 }
 
-.numberpage{
-    color: black;
-    float: left;
-    text-decoration: none;
+.rowcustom {
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+  width: 700px;
 }
 
-    .numberpage a.active {
-        background-color: #4CAF50;
-        color: white;
-        border-radius: 5px;
-    }
+.numberpage {
+  color: black;
+  float: left;
+  text-decoration: none;
+}
 
-    .numberpage a:hover:not(.active) {
-        background-color: #ddd;
-        border-radius: 5px;
-    }
+.numberpage a.active {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+}
+
+.numberpage a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other
 @media screen and (max-width: 480px) {

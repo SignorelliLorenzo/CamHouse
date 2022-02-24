@@ -1313,3 +1313,7 @@ C:\Users\Gabry\source\repos\CamHouse\CamHouse\bin\Debug\net5.0\StarkbankEcdsa.dl
 C:\Users\Gabry\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
 C:\Users\Gabry\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ResetPswConfirmLayout.cshtml.g.cs
 C:\Users\Gabry\source\repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
+C:\Users\elena\Source\Repos\CamHouse\CamHouse\bin\Debug\net5.0\SendGrid.dll
+C:\Users\elena\Source\Repos\CamHouse\CamHouse\bin\Debug\net5.0\StarkbankEcdsa.dll
+C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
+C:\Users\elena\Source\Repos\CamHouse\CamHouse\obj\Debug\net5.0\Razor\Pages\Layout\_ResetPasswordLayout.cshtml.g.cs

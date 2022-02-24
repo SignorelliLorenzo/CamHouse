@@ -25,6 +25,7 @@
             </h4>
             <section>
                 <form id="account" method="post">
+                    <div asp-validation-summary="All" class="all-error"></div>
                     <!-- Trasformazione form in div -->
                     <div class="EForm form-group">
                         <input type="email" asp-for="Input.Email" id="e-check" placeholder="Email"

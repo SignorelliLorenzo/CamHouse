@@ -26,6 +26,7 @@
             </h4>
             <section>
                 <form asp-route-returnUrl="@Model.ReturnUrl" id="account" method="post">
+                    <div asp-validation-summary="All" class="all-error"></div>
                     <!-- Trasformazione form in div -->
                     <div id="EForm form-group">
                         <input type="email" asp-for="Input.Email" id="e-check" placeholder="Email"
