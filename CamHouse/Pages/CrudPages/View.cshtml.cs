@@ -80,6 +80,10 @@ namespace CamHouse.Pages.CrudPages
             if(!String.IsNullOrEmpty(Preferiti))
             {
                 var ids = _userManager.GetUserAsync(User).Result.Favorites;
+                if(ids=="" || ids==null)
+                {
+                    EleView = new List<Telecamera_Data>();
+                }
                 GetTelecameraPerIdResponse result;
                 foreach (var id in ids.Split("|"))
                 {

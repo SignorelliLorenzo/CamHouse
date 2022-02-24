@@ -8492,19 +8492,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elena\\.nuget\\packages\\": {}
+    "C:\\Users\\canej\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+      "projectUniqueName": "C:\\Users\\canej\\source\\repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
       "projectName": "Api_Pcto",
-      "projectPath": "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
-      "packagesPath": "C:\\Users\\elena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elena\\source\\repos\\CamHouse\\Api_Pcto\\Api_Pcto\\obj\\",
+      "projectPath": "C:\\Users\\canej\\source\\repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\Api_Pcto.csproj",
+      "packagesPath": "C:\\Users\\canej\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\canej\\source\\repos\\CamHouse_Git\\Api_Pcto\\Api_Pcto\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\elena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\canej\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8595,7 +8595,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

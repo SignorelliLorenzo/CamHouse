@@ -10,8 +10,7 @@
         <div class="colcustom10">
             <div class="Zone-img">
                 <div class="Zone-img-view">
-                    @*<img id="video" src="https://localhost:5001/api/url=@Model.link" alt="Cam View" onerror="ErrorImage()" />*@
-                    <img id="video" src="https://localhost:5001/api/url=@Model.link" alt="Cam View" onerror="ErrorImage()" onload="imageRefresh(this,1000)" />
+                    <img id="video" src="https://localhost:44348/api/url/proxy=@Model.link" alt="Cam View" onerror="ErrorImage()" onload="imageRefresh(this,1000)" />
                 </div>
                 <div class="Zone-img-stats">
                     <p class="Zone-img-stats-title">
@@ -61,34 +60,7 @@
         img.onerror = null;
 
     }
-    //window.onload = function () {
-    //    var image = document.getElementById("video");
 
-    //    function updateImage() {
-    //        image.src = image.src.split("?")[0] + "?" + new Date().getTime();
-    //    }
-
-    //    setInterval(updateImage, 1000);
-    //}
-    //////function refresh(node) {
-    //////    var times = 3000; // gap in Milli Seconds;
-
-    //////    (function startRefresh() {
-    //////        var address;
-    //////        if (node.src.indexOf('?') > -1)
-    //////            address = node.src.split('?')[0];
-    //////        else
-    //////            address = node.src;
-    //////        node.data = address + "?time=" + new Date().getTime();
-
-    //////        setTimeout(startRefresh, times);
-    //////    })();
-    //////}
-    //////window.onload = function () {
-    //////    var node = document.getElementById('video');
-    //////    refresh(node);
-    //////    // you can refresh as many images you want just repeat above steps
-    //////}
 
     function imageRefresh(img, timeout) {
         setTimeout(function () {

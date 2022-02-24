@@ -16,10 +16,9 @@
                 <em class='bx bxs-star'></em>
                 <input type="submit" name="Preferiti" class="perferiti-text" value="Preferiti">
             </form>
-            <form class="STTForm" method="post">
+           @*
                 <em class='bx bxs-user-voice'></em>
-                <input type="submit" class="speak-text" name="Speak" value="Speak">
-            </form>
+                <button id="btnstt" class="speak-text" name="Speak" value="Speak"/>*@
         </div>
         <div class="colcustom">
 
@@ -28,7 +27,7 @@
 
                 <div class="cardcustom">
                     <div class="cardcustom-image">
-                        <object data="https://localhost:5001/api/url=@element.link.Replace("?","%3F").Replace("/","%2F")" type="image/jpeg">
+                        <object data="https://localhost:44348/api/proxy/url=@element.link.Replace("?","%3F").Replace("/","%2F")" type="image/jpeg">
                             <img src="~/Img/errorcam.png" alt="card-video" /> 
                         </object>
                         
@@ -80,3 +79,115 @@
         }
     }
 </div>
+<script>
+
+        let audioIN = { audio: true };
+        //  audio is true, for recording
+
+        // Access the permission for use
+        // the microphone
+        navigator.mediaDevices.getUserMedia(audioIN)
+
+          // 'then()' method returns a Promise
+          .then(function (mediaStreamObj) {
+
+            // Connect the media stream to the
+            // first audio element
+            //let audio = document.querySelector('audio');
+            ////returns the recorded audio via 'audio' tag
+
+            //// 'srcObject' is a property which
+            //// takes the media object
+            //// This is supported in the newer browsers
+            //if ("srcObject" in audio) {
+            //  audio.srcObject = mediaStreamObj;
+            //}
+            //else {   // Old version
+            //  audio.src = window.URL
+            //    .createObjectURL(mediaStreamObj);
+            //}
+
+            //// It will play the audio
+            //audio.onloadedmetadata = function (ev) {
+
+            //  // Play the audio in the 2nd audio
+            //  // element what is being recorded
+            //  audio.play();
+            //};
+
+            // Start record
+            let button = document.getElementById('btnstt');
+            let mediaRecorder = new MediaRecorder(mediaStreamObj);
+            // Pass the audio stream
+
+            // Start event
+            button.addEventListener('click', function (ev) {
+                if( button.id=='btnstt')
+                {
+                    mediaRecorder.start();
+                    button.id='btnstts';
+                }
+                else if(button.id=='btnstts')
+                {
+                    mediaRecorder.stop();
+                    button.id='btnstt';
+                }
+                else
+                {
+                    button.id='btnstt';
+                }
+              // console.log(mediaRecorder.state);
+            })
+
+            // Stop event
+            //stop.addEventListener('click', function (ev) {
+            //  mediaRecorder.stop();
+            //  // console.log(mediaRecorder.state);
+            //});
+
+            // If audio data available then push
+            // it to the chunk array
+            mediaRecorder.ondataavailable = function (ev) {
+              dataArray.push(ev.data);
+            }
+
+            // Chunk array to store the audio data
+            let dataArray = [];
+
+            // Convert the audio data in to blob
+            // after stopping the recording
+            mediaRecorder.onstop = function (ev) {
+
+              // blob of type mp3
+              let audioData = new Blob(dataArray,
+                        { 'type': 'audio/wav;' });
+            var fd = new FormData();
+fd.append('fname', 'test.wav');
+fd.append('data', audioData);
+$.ajax({
+    type: 'POST',
+    url: '/api/proxy/post',
+    data: fd,
+    processData: false,
+    contentType: false
+}).done(function(data) {
+       console.log(data);
+});
+    }
+
+}); 
+             
+            }
+          })
+
+          // If any error occurs then handles the error
+          .catch(function (err) {
+            console.log(err.name, err.message);
+          });
+
+
+
+
+
+
+</script>

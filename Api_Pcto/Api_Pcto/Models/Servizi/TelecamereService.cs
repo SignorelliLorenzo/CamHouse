@@ -57,7 +57,7 @@ namespace Api_Pcto.Models
         /// <returns></returns>
         public async Task<GetTelecameraPerNomeResponse> GetByName(string name)
         {
-            var telecamere = await _context.eletelecamere.Where(t => t.nome == name).ToListAsync();
+            var telecamere = await _context.eletelecamere.Where(t => t.nome.ToLower().Contains(name.ToLower().Trim())).ToListAsync();
             if(telecamere.Count == 0)
             {
                 return new GetTelecameraPerNomeResponse()
